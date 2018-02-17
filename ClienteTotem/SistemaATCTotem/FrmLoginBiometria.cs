@@ -12,6 +12,9 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoginBiometria : Form
     {
+        public static FrmLoguinMatricula frmLoguinMatricula;
+        public static FrmCadastroHoras frmCadastroHoras;
+
         public FrmLoginBiometria()
         {
             InitializeComponent();
@@ -24,17 +27,20 @@ namespace SistemaATCTotem
 
         private void FrmLoginBiometria_Click(object sender, EventArgs e)
         {
-            FrmLoguinMatricula frmLoguinMatricula = new FrmLoguinMatricula();
-            frmLoguinMatricula.frmbiometria = this;
+            frmLoguinMatricula = new FrmLoguinMatricula();
+            frmLoguinMatricula.frmbiometriamatricula = this;
+            frmCadastroHoras = new FrmCadastroHoras();
+            frmCadastroHoras.frmbiometriahoras = this;
             frmLoguinMatricula.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmConfiguracoes frmConfiguracoes = new FrmConfiguracoes();
-            frmConfiguracoes.Show();
+            frmCadastroHoras = new FrmCadastroHoras();
+            frmCadastroHoras.frmbiometriahoras = this;
+            frmCadastroHoras.Show();
+            this.Hide();
         }
-
     }
 }

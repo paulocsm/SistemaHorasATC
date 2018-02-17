@@ -12,7 +12,7 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoguinMatricula : Form
     {
-        public Form frmbiometria { get; set; }
+        public Form frmbiometriamatricula { get; set; }
 
         public FrmLoguinMatricula()
         {
@@ -21,14 +21,14 @@ namespace SistemaATCTotem
 
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            FrmCadastroHoras frmCadastroHoras = new FrmCadastroHoras();
-            frmCadastroHoras.Show();
+            FrmLoginBiometria.frmCadastroHoras.Show();
             this.Close();
         }
 
         private void CmdCancelar_Click(object sender, EventArgs e)
         {
-            frmbiometria.Show();
+            frmbiometriamatricula.Show();
+            FrmLoginBiometria.frmCadastroHoras.Close();
             this.Close();
         }
 

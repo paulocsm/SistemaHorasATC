@@ -25,7 +25,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string EndServidor {
             get {
                 return ((string)(this["EndServidor"]));
@@ -37,7 +37,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5220")]
         public int PortaServidor {
             get {
                 return ((int)(this["PortaServidor"]));
@@ -49,7 +49,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("12345678912345678912345678912")]
         public string ApiKey {
             get {
                 return ((string)(this["ApiKey"]));
@@ -61,7 +61,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM3")]
         public string PortaComLeitor {
             get {
                 return ((string)(this["PortaComLeitor"]));
@@ -73,7 +73,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("9600")]
         public string BaudRateLeitor {
             get {
                 return ((string)(this["BaudRateLeitor"]));
@@ -85,7 +85,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
         public string DataBitsLeitor {
             get {
                 return ((string)(this["DataBitsLeitor"]));
@@ -97,7 +97,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("NENHUM")]
         public string ParidadeLeitor {
             get {
                 return ((string)(this["ParidadeLeitor"]));
@@ -109,7 +109,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public string BitsParada {
             get {
                 return ((string)(this["BitsParada"]));
@@ -121,7 +121,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("NENHUM")]
         public string ControleFluxo {
             get {
                 return ((string)(this["ControleFluxo"]));

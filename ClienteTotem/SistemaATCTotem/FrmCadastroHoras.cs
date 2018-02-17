@@ -12,6 +12,8 @@ namespace SistemaATCTotem
 {
     public partial class FrmCadastroHoras : Form
     {
+        public Form frmbiometriahoras { get; set; }
+
         public FrmCadastroHoras()
         {
             InitializeComponent();
@@ -20,6 +22,18 @@ namespace SistemaATCTotem
         private void FrmCadastroHoras_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void CmdConfiguracoes_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracoes frmConfiguracoes = new FrmConfiguracoes();
+            frmConfiguracoes.Show(this);
+        }
+
+        private void CmdCancelar_Click(object sender, EventArgs e)
+        {
+            frmbiometriahoras.Show();
+            this.Close();
         }
     }
 }

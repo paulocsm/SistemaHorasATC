@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
-            this.ClientSize = new System.Drawing.Size(1350, 730);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.CmdCancelar);
             this.Controls.Add(this.CmdLogin);
             this.Controls.Add(this.label3);
@@ -139,6 +139,7 @@
             this.Controls.Add(this.TxtMatricula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PctLogoAtc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLoguinMatricula";
             this.Text = "FrmLoguinMatricula";
             this.Load += new System.EventHandler(this.FrmLoguinMatricula_Load);

@@ -62,6 +62,7 @@
             this.LblData = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
+            this.CmdConfiguracoes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -72,19 +73,20 @@
             this.CmdCancelar.BackColor = System.Drawing.Color.Gray;
             this.CmdCancelar.Font = new System.Drawing.Font("Calibri", 27.75F);
             this.CmdCancelar.ForeColor = System.Drawing.Color.White;
-            this.CmdCancelar.Location = new System.Drawing.Point(708, 627);
+            this.CmdCancelar.Location = new System.Drawing.Point(709, 678);
             this.CmdCancelar.Name = "CmdCancelar";
             this.CmdCancelar.Size = new System.Drawing.Size(188, 72);
             this.CmdCancelar.TabIndex = 15;
             this.CmdCancelar.Text = "Cancelar";
             this.CmdCancelar.UseVisualStyleBackColor = false;
+            this.CmdCancelar.Click += new System.EventHandler(this.CmdCancelar_Click);
             // 
             // CmdConfirmar
             // 
             this.CmdConfirmar.BackColor = System.Drawing.Color.Gray;
             this.CmdConfirmar.Font = new System.Drawing.Font("Calibri", 27.75F);
             this.CmdConfirmar.ForeColor = System.Drawing.Color.White;
-            this.CmdConfirmar.Location = new System.Drawing.Point(462, 627);
+            this.CmdConfirmar.Location = new System.Drawing.Point(463, 678);
             this.CmdConfirmar.Name = "CmdConfirmar";
             this.CmdConfirmar.Size = new System.Drawing.Size(188, 72);
             this.CmdConfirmar.TabIndex = 14;
@@ -147,9 +149,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(16, 215);
+            this.panel1.Location = new System.Drawing.Point(17, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1314, 200);
+            this.panel1.Size = new System.Drawing.Size(1330, 200);
             this.panel1.TabIndex = 22;
             // 
             // TxtAno
@@ -167,7 +169,7 @@
             this.TxtDescricao.FormattingEnabled = true;
             this.TxtDescricao.Location = new System.Drawing.Point(297, 49);
             this.TxtDescricao.Name = "TxtDescricao";
-            this.TxtDescricao.Size = new System.Drawing.Size(996, 47);
+            this.TxtDescricao.Size = new System.Drawing.Size(1015, 47);
             this.TxtDescricao.TabIndex = 24;
             // 
             // TxtNumero
@@ -193,7 +195,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 190);
+            this.label5.Location = new System.Drawing.Point(29, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(208, 39);
             this.label5.TabIndex = 22;
@@ -211,15 +213,15 @@
             this.panel2.Controls.Add(this.LblHora);
             this.panel2.Controls.Add(this.label7);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(16, 468);
+            this.panel2.Location = new System.Drawing.Point(17, 504);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1314, 121);
+            this.panel2.Size = new System.Drawing.Size(1330, 121);
             this.panel2.TabIndex = 23;
             // 
             // TxtHoraFim
             // 
             this.TxtHoraFim.Font = new System.Drawing.Font("Calibri", 24F);
-            this.TxtHoraFim.Location = new System.Drawing.Point(1103, 51);
+            this.TxtHoraFim.Location = new System.Drawing.Point(1122, 51);
             this.TxtHoraFim.Mask = "00:00";
             this.TxtHoraFim.Name = "TxtHoraFim";
             this.TxtHoraFim.Size = new System.Drawing.Size(190, 47);
@@ -231,7 +233,7 @@
             this.TxtDataFim.CalendarFont = new System.Drawing.Font("Calibri", 24F);
             this.TxtDataFim.Font = new System.Drawing.Font("Calibri", 24F);
             this.TxtDataFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TxtDataFim.Location = new System.Drawing.Point(891, 51);
+            this.TxtDataFim.Location = new System.Drawing.Point(910, 51);
             this.TxtDataFim.Name = "TxtDataFim";
             this.TxtDataFim.Size = new System.Drawing.Size(190, 47);
             this.TxtDataFim.TabIndex = 21;
@@ -263,7 +265,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1138, 9);
+            this.label8.Location = new System.Drawing.Point(1157, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 39);
             this.label8.TabIndex = 19;
@@ -274,7 +276,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(893, 9);
+            this.label9.Location = new System.Drawing.Point(912, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 39);
             this.label9.TabIndex = 17;
@@ -307,7 +309,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(28, 443);
+            this.label10.Location = new System.Drawing.Point(29, 476);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 39);
             this.label10.TabIndex = 24;
@@ -318,7 +320,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(159, 12);
+            this.label11.Location = new System.Drawing.Point(160, 12);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(448, 39);
             this.label11.TabIndex = 25;
@@ -329,7 +331,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(160, 72);
+            this.label12.Location = new System.Drawing.Point(161, 72);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(137, 36);
             this.label12.TabIndex = 26;
@@ -340,7 +342,7 @@
             this.LblMatricula.AutoSize = true;
             this.LblMatricula.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMatricula.ForeColor = System.Drawing.Color.White;
-            this.LblMatricula.Location = new System.Drawing.Point(303, 72);
+            this.LblMatricula.Location = new System.Drawing.Point(304, 72);
             this.LblMatricula.Name = "LblMatricula";
             this.LblMatricula.Size = new System.Drawing.Size(129, 36);
             this.LblMatricula.TabIndex = 27;
@@ -351,7 +353,7 @@
             this.LblNome.AutoSize = true;
             this.LblNome.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNome.ForeColor = System.Drawing.Color.White;
-            this.LblNome.Location = new System.Drawing.Point(260, 117);
+            this.LblNome.Location = new System.Drawing.Point(261, 117);
             this.LblNome.Name = "LblNome";
             this.LblNome.Size = new System.Drawing.Size(86, 36);
             this.LblNome.TabIndex = 29;
@@ -362,7 +364,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(160, 117);
+            this.label15.Location = new System.Drawing.Point(161, 117);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(94, 36);
             this.label15.TabIndex = 28;
@@ -373,7 +375,7 @@
             this.LblDepartamento.AutoSize = true;
             this.LblDepartamento.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDepartamento.ForeColor = System.Drawing.Color.White;
-            this.LblDepartamento.Location = new System.Drawing.Point(731, 72);
+            this.LblDepartamento.Location = new System.Drawing.Point(732, 72);
             this.LblDepartamento.Name = "LblDepartamento";
             this.LblDepartamento.Size = new System.Drawing.Size(187, 36);
             this.LblDepartamento.TabIndex = 31;
@@ -384,7 +386,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(530, 72);
+            this.label17.Location = new System.Drawing.Point(531, 72);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(195, 36);
             this.label17.TabIndex = 30;
@@ -395,7 +397,7 @@
             this.LblFunção.AutoSize = true;
             this.LblFunção.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFunção.ForeColor = System.Drawing.Color.White;
-            this.LblFunção.Location = new System.Drawing.Point(643, 117);
+            this.LblFunção.Location = new System.Drawing.Point(644, 117);
             this.LblFunção.Name = "LblFunção";
             this.LblFunção.Size = new System.Drawing.Size(99, 36);
             this.LblFunção.TabIndex = 33;
@@ -406,7 +408,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(530, 117);
+            this.label19.Location = new System.Drawing.Point(531, 117);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(107, 36);
             this.label19.TabIndex = 32;
@@ -417,7 +419,7 @@
             this.LblData.AutoSize = true;
             this.LblData.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblData.ForeColor = System.Drawing.Color.White;
-            this.LblData.Location = new System.Drawing.Point(1012, 12);
+            this.LblData.Location = new System.Drawing.Point(1021, 12);
             this.LblData.Name = "LblData";
             this.LblData.Size = new System.Drawing.Size(326, 39);
             this.LblData.TabIndex = 34;
@@ -437,19 +439,33 @@
             // PctLogoAtc
             // 
             this.PctLogoAtc.Image = global::SistemaATCTotem.Properties.Resources.atclogocinza;
-            this.PctLogoAtc.Location = new System.Drawing.Point(12, 12);
+            this.PctLogoAtc.Location = new System.Drawing.Point(13, 12);
             this.PctLogoAtc.Name = "PctLogoAtc";
-            this.PctLogoAtc.Size = new System.Drawing.Size(145, 141);
+            this.PctLogoAtc.Size = new System.Drawing.Size(141, 141);
             this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PctLogoAtc.TabIndex = 35;
             this.PctLogoAtc.TabStop = false;
+            // 
+            // CmdConfiguracoes
+            // 
+            this.CmdConfiguracoes.BackColor = System.Drawing.Color.Gray;
+            this.CmdConfiguracoes.Font = new System.Drawing.Font("Calibri", 27.75F);
+            this.CmdConfiguracoes.ForeColor = System.Drawing.Color.White;
+            this.CmdConfiguracoes.Location = new System.Drawing.Point(1100, 678);
+            this.CmdConfiguracoes.Name = "CmdConfiguracoes";
+            this.CmdConfiguracoes.Size = new System.Drawing.Size(247, 72);
+            this.CmdConfiguracoes.TabIndex = 36;
+            this.CmdConfiguracoes.Text = "Configurações";
+            this.CmdConfiguracoes.UseVisualStyleBackColor = false;
+            this.CmdConfiguracoes.Click += new System.EventHandler(this.CmdConfiguracoes_Click);
             // 
             // FrmCadastroHoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
-            this.ClientSize = new System.Drawing.Size(1350, 730);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.CmdConfiguracoes);
             this.Controls.Add(this.PctLogoAtc);
             this.Controls.Add(this.LblData);
             this.Controls.Add(this.LblFunção);
@@ -467,6 +483,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CmdCancelar);
             this.Controls.Add(this.CmdConfirmar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastroHoras";
             this.Text = "FrmCadastroHoras";
             this.Load += new System.EventHandler(this.FrmCadastroHoras_Load);
@@ -516,5 +533,6 @@
         private System.Windows.Forms.MaskedTextBox TxtHoraFim;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox PctLogoAtc;
+        private System.Windows.Forms.Button CmdConfiguracoes;
     }
 }

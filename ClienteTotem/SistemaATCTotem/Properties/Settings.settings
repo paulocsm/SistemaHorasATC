@@ -3,31 +3,31 @@
   <Profiles />
   <Settings>
     <Setting Name="EndServidor" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="PortaServidor" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">5220</Value>
     </Setting>
     <Setting Name="ApiKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">12345678912345678912345678912</Value>
     </Setting>
     <Setting Name="PortaComLeitor" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">COM3</Value>
     </Setting>
     <Setting Name="BaudRateLeitor" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">9600</Value>
     </Setting>
     <Setting Name="DataBitsLeitor" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">8</Value>
     </Setting>
     <Setting Name="ParidadeLeitor" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">NENHUM</Value>
     </Setting>
     <Setting Name="BitsParada" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="ControleFluxo" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">NENHUM</Value>
     </Setting>
   </Settings>
 </SettingsFile>
