@@ -51,6 +51,12 @@
     <Compile Include="FrmCadastroHoras.Designer.cs">
       <DependentUpon>FrmCadastroHoras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfiguracoes.Designer.cs">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLoginBiometria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCadastroHoras.resx">
       <DependentUpon>FrmCadastroHoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfiguracoes.resx">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginBiometria.resx">
       <DependentUpon>FrmLoginBiometria.cs</DependentUpon>

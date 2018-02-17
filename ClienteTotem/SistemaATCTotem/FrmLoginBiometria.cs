@@ -29,5 +29,12 @@ namespace SistemaATCTotem
             frmLoguinMatricula.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracoes frmConfiguracoes = new FrmConfiguracoes();
+            frmConfiguracoes.Show();
+        }
+
     }
 }

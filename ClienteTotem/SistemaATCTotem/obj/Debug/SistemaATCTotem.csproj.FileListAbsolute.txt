@@ -10,3 +10,16 @@ C:\Users\Paulo César\source\repos\SistemaATCTotem\SistemaATCTotem\obj\Debug\Sis
 C:\Users\Paulo César\source\repos\SistemaATCTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmLoginBiometria.resources
 C:\Users\Paulo César\source\repos\SistemaATCTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmLoguinMatricula.resources
 C:\Users\Paulo César\source\repos\SistemaATCTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmCadastroHoras.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Debug\SistemaATCTotem.exe.config
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Debug\SistemaATCTotem.exe
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Debug\SistemaATCTotem.pdb
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.csprojResolveAssemblyReference.cache
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmCadastroHoras.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmConfiguracoes.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmLoginBiometria.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.FrmLoguinMatricula.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.Properties.Resources.resources
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.csproj.GenerateResource.Cache
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.csproj.CoreCompileInputs.cache
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.exe
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.pdb
