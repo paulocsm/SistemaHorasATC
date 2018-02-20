@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.CmdConfirmar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             this.CmdConfiguracoes = new System.Windows.Forms.Button();
+            this.TmrData = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -459,6 +461,11 @@
             this.CmdConfiguracoes.UseVisualStyleBackColor = false;
             this.CmdConfiguracoes.Click += new System.EventHandler(this.CmdConfiguracoes_Click);
             // 
+            // TmrData
+            // 
+            this.TmrData.Interval = 1000;
+            this.TmrData.Tick += new System.EventHandler(this.TmrData_Tick);
+            // 
             // FrmCadastroHoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,5 +541,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox PctLogoAtc;
         private System.Windows.Forms.Button CmdConfiguracoes;
+        private System.Windows.Forms.Timer TmrData;
     }
 }

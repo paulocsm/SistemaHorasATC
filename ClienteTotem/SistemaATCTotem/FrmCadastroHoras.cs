@@ -21,7 +21,9 @@ namespace SistemaATCTotem
 
         private void FrmCadastroHoras_Load(object sender, EventArgs e)
         {
-
+            //Atualiza a label de data e hora
+            LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
+            TmrData.Start();
         }
 
         private void CmdConfiguracoes_Click(object sender, EventArgs e)
@@ -34,6 +36,12 @@ namespace SistemaATCTotem
         {
             frmbiometriahoras.Show();
             this.Close();
+        }
+
+        private void TmrData_Tick(object sender, EventArgs e)
+        {
+            //Atualiza a label de data e hora
+            LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
         }
     }
 }
