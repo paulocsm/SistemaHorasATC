@@ -24,6 +24,7 @@ namespace SistemaATCTotem
             //Atualiza a label de data e hora
             LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
             TmrData.Start();
+            AtualizaTela();
         }
 
         private void CmdConfiguracoes_Click(object sender, EventArgs e)
@@ -42,6 +43,14 @@ namespace SistemaATCTotem
         {
             //Atualiza a label de data e hora
             LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void AtualizaTela()
+        {
+            LblMatricula.Text = API.respostaLogin.Matricula.ToString();
+            LblNome.Text = API.respostaLogin.Nome;
+            LblDepartamento.Text = API.respostaLogin.Departamento;
+            LblFunção.Text = API.respostaLogin.Funcao;
         }
     }
 }

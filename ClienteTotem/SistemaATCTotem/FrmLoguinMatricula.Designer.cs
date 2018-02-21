@@ -34,7 +34,7 @@
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.CmdLogin = new System.Windows.Forms.Button();
             this.CmdCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblStatus = new System.Windows.Forms.Label();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             this.TxtMatricula.Name = "TxtMatricula";
             this.TxtMatricula.Size = new System.Drawing.Size(242, 46);
             this.TxtMatricula.TabIndex = 4;
+            this.TxtMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -76,8 +77,10 @@
             this.TxtSenha.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSenha.Location = new System.Drawing.Point(566, 454);
             this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(242, 46);
             this.TxtSenha.TabIndex = 6;
+            this.TxtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CmdLogin
             // 
@@ -105,15 +108,15 @@
             this.CmdCancelar.UseVisualStyleBackColor = false;
             this.CmdCancelar.Click += new System.EventHandler(this.CmdCancelar_Click);
             // 
-            // label1
+            // LblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(463, 650);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 45);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Informe os dados solicitados";
+            this.LblStatus.AutoSize = true;
+            this.LblStatus.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatus.Location = new System.Drawing.Point(463, 650);
+            this.LblStatus.Name = "LblStatus";
+            this.LblStatus.Size = new System.Drawing.Size(444, 45);
+            this.LblStatus.TabIndex = 3;
+            this.LblStatus.Text = "Informe os dados solicitados";
             // 
             // PctLogoAtc
             // 
@@ -137,7 +140,7 @@
             this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtMatricula);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.PctLogoAtc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLoguinMatricula";
@@ -157,6 +160,6 @@
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.Button CmdLogin;
         private System.Windows.Forms.Button CmdCancelar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblStatus;
     }
 }

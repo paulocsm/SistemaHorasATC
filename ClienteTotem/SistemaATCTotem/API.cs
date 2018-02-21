@@ -7,6 +7,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace SistemaATCTotem
 {
@@ -14,36 +15,35 @@ namespace SistemaATCTotem
     {
         static HttpClient Cliente = new HttpClient();
         static string UrlBase = "http://" + Properties.Settings.Default.EndServidor + ":" + Properties.Settings.Default.PortaServidor + "/API/";
+        public static RespostaLogin respostaLogin = new RespostaLogin();
 
-        public static async Task<Classes.RespostaLogin> Login(string Usuario, int Matricula, int IndiceBiometria, string Senha, string Origem, string Key)
+        public static async Task<RespostaLogin> Login(string Usuario, int Matricula, int IndiceBiometria, string Senha, string Origem, string Key)
         {
-            string Resposta;
+        RespostaLogin UsuarioLogado = new RespostaLogin();
+        string Resposta;
             string UrlComplementar;
-
-        //    if (Usuario != "" & Matricula == 0 & IndiceBiometria == 0 & Senha != "" & Origem != "") // loguin  por usuário e senha;
-        //    {
-        //
-        //    }
 
             if (Usuario == "" & Matricula != 0 & IndiceBiometria == 0 & Senha != "" & Origem != "") // Loguin por matricula e senha
             {
-                UrlComplementar = "Matricula?Origem=Totem&Matricula=" + Matricula + "&Senha=" + MD5Hash(Senha);
+                UrlComplementar = "Login/Matricula?Origem=Totem&Matricula=" + Matricula + "&Senha=" + MD5Hash(Senha);
 
                 try
                 {
                     Resposta = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
-                    
-                    Resposta = JsonConvert.DeserializeObject<Classes.RespostaLogin>(Resposta);
+                    UsuarioLogado = JsonConvert.DeserializeObject<RespostaLogin>(Resposta);                   
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    return "Falha!";
+                    MessageBox.Show(e.ToString());
+                    UsuarioLogado.Erro = "Falha";
                 }
+                return UsuarioLogado;
             }
             if (Usuario == "" & Matricula == 0 & IndiceBiometria != 0 & Senha == "" & Origem != "" & Key != "") //Loguin por biometria
             {
 
             }
+            return UsuarioLogado;
         }
 
         public static async Task<string> TesteComServidor(string url)
