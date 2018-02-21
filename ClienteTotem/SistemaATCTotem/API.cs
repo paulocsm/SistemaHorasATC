@@ -21,7 +21,7 @@ namespace SistemaATCTotem
         {
         RespostaLogin UsuarioLogado = new RespostaLogin();
         string Resposta;
-            string UrlComplementar;
+        string UrlComplementar;
 
             if (Usuario == "" & Matricula != 0 & IndiceBiometria == 0 & Senha != "" & Origem != "") // Loguin por matricula e senha
             {
@@ -44,6 +44,28 @@ namespace SistemaATCTotem
 
             }
             return UsuarioLogado;
+        }
+
+        public static async Task<UltimoRegistro> BuscaUltimoRegistro(string ApiKey, int Matricula)
+        {
+            UltimoRegistro ultimoRegistro = new UltimoRegistro();
+            string Resposta;
+            string UrlComplementar;
+
+            UrlComplementar = "Funcionarios/UltimoRegistro?ApiKey=" + ApiKey + "&Matricula=" + Matricula;
+
+            try
+            {
+                Resposta = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
+                ultimoRegistro = JsonConvert.DeserializeObject<UltimoRegistro>(Resposta);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                ultimoRegistro.Erro = "Falha";
+            }
+            return ultimoRegistro;
+
         }
 
         public static async Task<string> TesteComServidor(string url)

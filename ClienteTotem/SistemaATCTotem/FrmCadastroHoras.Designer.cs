@@ -36,10 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TxtAno = new System.Windows.Forms.ComboBox();
+            this.TxtGerente = new System.Windows.Forms.ComboBox();
             this.TxtDescricao = new System.Windows.Forms.ComboBox();
             this.TxtNumero = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TxtAno = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtHoraFim = new System.Windows.Forms.MaskedTextBox();
@@ -142,10 +142,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.TxtAno);
+            this.panel1.Controls.Add(this.TxtGerente);
             this.panel1.Controls.Add(this.TxtDescricao);
             this.panel1.Controls.Add(this.TxtNumero);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.TxtAno);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -156,14 +156,14 @@
             this.panel1.Size = new System.Drawing.Size(1330, 200);
             this.panel1.TabIndex = 22;
             // 
-            // TxtAno
+            // TxtGerente
             // 
-            this.TxtAno.Font = new System.Drawing.Font("Calibri", 24F);
-            this.TxtAno.FormattingEnabled = true;
-            this.TxtAno.Location = new System.Drawing.Point(17, 134);
-            this.TxtAno.Name = "TxtAno";
-            this.TxtAno.Size = new System.Drawing.Size(347, 47);
-            this.TxtAno.TabIndex = 25;
+            this.TxtGerente.Font = new System.Drawing.Font("Calibri", 24F);
+            this.TxtGerente.FormattingEnabled = true;
+            this.TxtGerente.Location = new System.Drawing.Point(17, 134);
+            this.TxtGerente.Name = "TxtGerente";
+            this.TxtGerente.Size = new System.Drawing.Size(347, 47);
+            this.TxtGerente.TabIndex = 25;
             // 
             // TxtDescricao
             // 
@@ -183,14 +183,14 @@
             this.TxtNumero.Size = new System.Drawing.Size(127, 47);
             this.TxtNumero.TabIndex = 23;
             // 
-            // comboBox1
+            // TxtAno
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 24F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(127, 47);
-            this.comboBox1.TabIndex = 22;
+            this.TxtAno.Font = new System.Drawing.Font("Calibri", 24F);
+            this.TxtAno.FormattingEnabled = true;
+            this.TxtAno.Location = new System.Drawing.Point(17, 49);
+            this.TxtAno.Name = "TxtAno";
+            this.TxtAno.Size = new System.Drawing.Size(127, 47);
+            this.TxtAno.TabIndex = 22;
             // 
             // label5
             // 
@@ -530,10 +530,10 @@
         private System.Windows.Forms.Label LblFunção;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label LblData;
-        private System.Windows.Forms.ComboBox TxtAno;
+        private System.Windows.Forms.ComboBox TxtGerente;
         private System.Windows.Forms.ComboBox TxtDescricao;
         private System.Windows.Forms.ComboBox TxtNumero;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox TxtAno;
         private System.Windows.Forms.DateTimePicker TxtDataInicio;
         private System.Windows.Forms.DateTimePicker TxtDataFim;
         private System.Windows.Forms.MaskedTextBox TxtHoraInicio;

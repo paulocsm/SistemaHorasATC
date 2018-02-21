@@ -45,12 +45,51 @@ namespace SistemaATCTotem
             LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
         }
 
-        private void AtualizaTela()
+        private async void AtualizaTela()
         {
             LblMatricula.Text = API.respostaLogin.Matricula.ToString();
             LblNome.Text = API.respostaLogin.Nome;
             LblDepartamento.Text = API.respostaLogin.Departamento;
             LblFunção.Text = API.respostaLogin.Funcao;
+
+            TxtDataInicio.Text = DateTime.Now.Date.ToLongDateString();
+            TxtHoraInicio.Text = "07:30";
+            TxtDataFim.Text = DateTime.Now.Date.ToLongDateString();
+            TxtHoraFim.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
+
+            UltimoRegistro ultimoRegistro = new UltimoRegistro();
+            ultimoRegistro = await API.BuscaUltimoRegistro("asdf", API.respostaLogin.Matricula);
+
+            TxtGerente.Items.Clear();
+            int selected = 0;
+            for(int i=0; i < ultimoRegistro.gerentes.Length; i++)
+            {
+                TxtGerente.Items.Add(ultimoRegistro.gerentes[i].Nome);
+                if (ultimoRegistro.matriculaUltimoGerente == ultimoRegistro.gerentes[i].Matricula)
+                {
+                    selected = i;
+                }
+            }
+            TxtGerente.SelectedIndex = selected;
+
+            selected = 0;
+            TxtAno.Items.Clear();
+            TxtNumero.Items.Clear();
+            TxtDescricao.Items.Clear();
+            for (int i = 0; i < ultimoRegistro.obras.Length; i++)
+            {
+                TxtAno.Items.Add(ultimoRegistro.obras[i].Ano);
+                TxtNumero.Items.Add(ultimoRegistro.obras[i].Codigo.ToString().PadLeft(3,'0'));
+                TxtDescricao.Items.Add(ultimoRegistro.obras[i].Nome);
+                if (ultimoRegistro.anoUltimaObra == ultimoRegistro.obras[i].Ano & ultimoRegistro.codUltimaObra == ultimoRegistro.obras[i].Codigo)
+                {
+                    selected = i;
+                }
+            }
+            TxtAno.SelectedIndex = selected;
+            TxtNumero.SelectedIndex = selected;
+            TxtDescricao.SelectedIndex = selected;
+
         }
     }
 }
