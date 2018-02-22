@@ -46,23 +46,13 @@ namespace SistemaATCTotem
         public string Status { get; set; }
     }
 
-    public class Atividades
-    {
-        public int Codigo { get; set; }
-        public string Descricao { get; set; }
-        public string FuncoesCapacitadas { get; set; }
-    }
-
     public class UltimoRegistro
     {
         public string Erro { get; set; }
         public int codUltimaObra { get; set; }
         public int anoUltimaObra { get; set; }
         public int matriculaUltimoGerente { get; set; }
-        public string ultimaAtividade { get; set; }
         public Obras[] obras { get; set; }
         public Funcionario[] gerentes { get; set; }
-        public Atividades[] atividades { get; set; }
     }
-
 }

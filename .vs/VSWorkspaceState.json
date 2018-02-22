@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ClienteTotem",
+    "\\ClienteTotem\\packages",
+    "\\ClienteTotem\\SistemaATCTotem"
   ],
+  "SelectedNode": "\\ClienteTotem\\SistemaATCTotem\\FrmCadastroHoras.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -25,3 +25,5 @@ C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\
 C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.pdb
 C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ATC 004\Desktop\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.exe
+C:\Users\ATC 004\Desktop\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.pdb

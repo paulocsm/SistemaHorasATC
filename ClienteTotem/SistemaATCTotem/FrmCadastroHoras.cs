@@ -13,8 +13,6 @@ namespace SistemaATCTotem
     public partial class FrmCadastroHoras : Form
     {
         public Form frmbiometriahoras { get; set; }
-        UltimoRegistro ultimoRegistro = new UltimoRegistro();
-        bool AuxAtualizaTela;
 
         public FrmCadastroHoras()
         {
@@ -49,8 +47,6 @@ namespace SistemaATCTotem
 
         private async void AtualizaTela()
         {
-            AuxAtualizaTela = true;
-
             LblMatricula.Text = API.respostaLogin.Matricula.ToString();
             LblNome.Text = API.respostaLogin.Nome;
             LblDepartamento.Text = API.respostaLogin.Departamento;
@@ -60,7 +56,8 @@ namespace SistemaATCTotem
             TxtHoraInicio.Text = "07:30";
             TxtDataFim.Text = DateTime.Now.Date.ToLongDateString();
             TxtHoraFim.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
-            
+
+            UltimoRegistro ultimoRegistro = new UltimoRegistro();
             ultimoRegistro = await API.BuscaUltimoRegistro("asdf", API.respostaLogin.Matricula);
 
             TxtGerente.Items.Clear();
@@ -92,45 +89,6 @@ namespace SistemaATCTotem
             TxtAno.SelectedIndex = selected;
             TxtNumero.SelectedIndex = selected;
             TxtDescricao.SelectedIndex = selected;
-
-            TxtAtividade.Items.Clear();
-            selected = 0;
-            int contador = 0;
-            for (int i = 0; i < ultimoRegistro.atividades.Length; i++)
-            {
-
-                if (ultimoRegistro.atividades[i].FuncoesCapacitadas.Contains(API.respostaLogin.Funcao))
-                {
-                    TxtAtividade.Items.Add(ultimoRegistro.atividades[i].Descricao);
-                    if (ultimoRegistro.ultimaAtividade == ultimoRegistro.atividades[i].Descricao)
-                    {
-                        selected = contador;
-                    }
-                    contador++;
-                }
-            }
-            TxtAtividade.SelectedIndex = selected;
-            AuxAtualizaTela = false;
-        }
-
-        private void TxtAno_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (AuxAtualizaTela == false)
-            {
-                TxtNumero.Items.Clear();
-                TxtNumero.Text = "";
-                TxtDescricao.Items.Clear();
-                TxtDescricao.Text = "";
-                
-                for (int i = 0; i < ultimoRegistro.obras.Length; i++)
-                {
-                    if (Convert.ToInt32(TxtAno.Text) == ultimoRegistro.obras[i].Ano)
-                    {
-                        TxtNumero.Items.Add(ultimoRegistro.obras[i].Codigo.ToString().PadLeft(3, '0'));
-                        TxtDescricao.Items.Add(ultimoRegistro.obras[i].Nome);
-                    }
-                }
-            }
         }
     }
 }

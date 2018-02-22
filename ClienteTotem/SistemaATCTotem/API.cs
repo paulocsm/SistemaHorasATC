@@ -68,6 +68,26 @@ namespace SistemaATCTotem
 
         }
 
+        public static async Task<string> BuscaHoraeData(string ApiKey)
+        {
+            string horaeData;
+            string UrlComplementar;
+
+            UrlComplementar = "Miscelaneas/Datetime";
+
+            try
+            {
+                horaeData = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
+                horaeData = JsonConvert.DeserializeObject<string>(horaeData);
+            }
+            catch (Exception e)
+            {
+                return "Falha!";
+            }
+            return horaeData;
+
+        }
+
         public static async Task<string> TesteComServidor(string url)
         {
             string Resposta;
