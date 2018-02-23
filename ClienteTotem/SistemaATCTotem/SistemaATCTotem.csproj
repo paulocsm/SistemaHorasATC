@@ -50,11 +50,11 @@
   <ItemGroup>
     <Compile Include="API.cs" />
     <Compile Include="Classes.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="TecladoNumerico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TecladoNumerico.Designer.cs">
+      <DependentUpon>TecladoNumerico.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCadastroHoras.cs">
       <SubType>Form</SubType>
@@ -82,8 +82,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="TecladoNumerico.resx">
+      <DependentUpon>TecladoNumerico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroHoras.resx">
       <DependentUpon>FrmCadastroHoras.cs</DependentUpon>
@@ -123,6 +123,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\atclogocinza.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

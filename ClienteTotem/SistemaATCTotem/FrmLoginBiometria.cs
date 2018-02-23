@@ -22,7 +22,8 @@ namespace SistemaATCTotem
 
         private void FrmLoginBiometria_Load(object sender, EventArgs e)
         {
-
+            TecladoNumerico tecladoNumerico = new TecladoNumerico();
+            tecladoNumerico.Show(this);
         }
 
         private void FrmLoginBiometria_Click(object sender, EventArgs e)
