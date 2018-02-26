@@ -20,22 +20,18 @@ namespace SistemaATCTotem
             InitializeComponent();
         }
 
-        private void FrmLoginBiometria_Load(object sender, EventArgs e)
-        {
-            TecladoNumerico tecladoNumerico = new TecladoNumerico();
-            tecladoNumerico.Show(this);
-        }
-
+        //Abre tela de login ao clicar por cima da tela
         private void FrmLoginBiometria_Click(object sender, EventArgs e)
         {
             frmLoguinMatricula = new FrmLoguinMatricula();
-            frmLoguinMatricula.frmbiometriamatricula = this;
+            frmLoguinMatricula.frmbiometriamatricula = this; // 
             frmCadastroHoras = new FrmCadastroHoras();
             frmCadastroHoras.frmbiometriahoras = this;
             frmLoguinMatricula.Show();
             this.Hide();
         }
 
+        //Gambirra. REMOVER
         private void button1_Click(object sender, EventArgs e)
         {
             frmCadastroHoras = new FrmCadastroHoras();
@@ -44,6 +40,7 @@ namespace SistemaATCTotem
             this.Hide();
         }
 
+        //Abre tela de login ao clicar por cima da imagem
         private void PctLogoAtc_Click(object sender, EventArgs e)
         {
             frmLoguinMatricula = new FrmLoguinMatricula();

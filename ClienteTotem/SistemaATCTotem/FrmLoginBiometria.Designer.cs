@@ -99,7 +99,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLoginBiometria";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FrmLoginBiometria_Load);
             this.Click += new System.EventHandler(this.FrmLoginBiometria_Click);
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).EndInit();
             this.ResumeLayout(false);
