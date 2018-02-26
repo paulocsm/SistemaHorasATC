@@ -57,3 +57,4 @@ C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCT
 C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.csproj.CoreCompileInputs.cache
 C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.exe
 C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.pdb
+C:\Users\Paulo César\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Debug\SistemaATCTotem.TecladoNumerico.resources
