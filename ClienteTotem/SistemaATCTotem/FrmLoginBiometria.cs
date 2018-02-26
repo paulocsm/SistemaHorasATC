@@ -12,8 +12,8 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoginBiometria : Form
     {
-        public static FrmLoguinMatricula frmLoguinMatricula;
-        public static FrmCadastroHoras frmCadastroHoras;
+        public static FrmLoguinMatricula frmLoguinMatricula; // Form da tela de login por matrícula
+        public static FrmCadastroHoras frmCadastroHoras;     // Form da tela de cadastro de horas
 
         public FrmLoginBiometria()
         {

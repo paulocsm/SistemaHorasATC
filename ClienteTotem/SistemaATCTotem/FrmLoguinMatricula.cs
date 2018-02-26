@@ -12,16 +12,19 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoguinMatricula : Form
     {
-        public Form frmbiometriamatricula { get; set; }
+        public Form frmbiometriamatricula { get; set; } // Varável usada para receber os parametros de FormLoginBiometria
 
+        // Inicializa a tela
         public FrmLoguinMatricula()
         {
             InitializeComponent();
         }
 
+        // Método sensível ao clique no botão "Acessar"
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            if(TxtMatricula.Text == "")
+            // Testa se usuario entrou com valor nulo no campo de matricula
+            if (TxtMatricula.Text == "")
             {
                 LblStatus.Text = "Informe a matricula";
                 LblStatus.ForeColor = Color.Red;
@@ -29,6 +32,8 @@ namespace SistemaATCTotem
                 return;
             }
             int matricula;
+
+            // Testa se usuario entrou com valor numerico valido no campo de matricula
             if (!int.TryParse(TxtMatricula.Text, out matricula) == true)
             {
                 LblStatus.Text = "A matricula deve conter um valor numérico";
@@ -36,6 +41,7 @@ namespace SistemaATCTotem
                 TxtMatricula.Focus();
                 return;
             }
+            // Testa se usuario entrou com valor nulo no campo de senha
             if (TxtSenha.Text == "")
             {
                 LblStatus.Text = "Informe a senha";
@@ -45,7 +51,7 @@ namespace SistemaATCTotem
             }
 
             logar("", Convert.ToInt32(TxtMatricula.Text), 0, TxtSenha.Text, "Totem","");
-            LblStatus.Text = "Verificando dados no serividor";
+            LblStatus.Text = "Verificando dados no servidor";
             LblStatus.ForeColor = Color.Black;
         }
 
