@@ -46,6 +46,24 @@ namespace SistemaATCTotem
             return UsuarioLogado;
         }
 
+        public static async Task<string> Logout(string Origem, string ApiKey, string Usuario, int IndiceBiometria, int Matricula)
+        {
+            string Resposta;
+            string UrlComplementar = "Login/Logout?Origem=Totem&ApiKey=" + ApiKey + "&Usuario=" + Usuario + "&IndiceBiometria=" + IndiceBiometria + "&Matricula=" + Matricula;
+
+            try
+            {
+                Resposta = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
+                Resposta = JsonConvert.DeserializeObject<string>(Resposta);
+            }
+            catch (Exception)
+            {
+                return "Falha!";
+            }
+
+            return Resposta;
+        }
+
         public static async Task<UltimoRegistro> BuscaUltimoRegistro(string ApiKey, int Matricula)
         {
             UltimoRegistro ultimoRegistro = new UltimoRegistro();
@@ -103,6 +121,26 @@ namespace SistemaATCTotem
             }
 
             return Resposta;
+        }
+
+        public static async Task<DateTime> BuscaHoraeData()
+        {
+            DateTime horaeData = DateTime.Now;
+            string Resposta;
+            string UrlComplementar;
+
+            UrlComplementar = "Miscelaneas/Datetime";
+
+            try
+            {
+                Resposta = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
+                horaeData = JsonConvert.DeserializeObject<DateTime>(Resposta);
+            }
+            catch (Exception e)
+            {
+                return horaeData;
+            }
+            return horaeData;
         }
 
         public static string MD5Hash(string text)
