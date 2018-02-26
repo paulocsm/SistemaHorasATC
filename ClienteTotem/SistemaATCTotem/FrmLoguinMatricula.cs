@@ -12,16 +12,19 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoguinMatricula : Form
     {
-        public Form frmbiometriamatricula { get; set; }
+        public Form frmbiometriamatricula { get; set; } // Variável usada para receber os parametros de FormLoginBiometria
 
+        // Inicializa a tela
         public FrmLoguinMatricula()
         {
             InitializeComponent();
         }
 
+        // Método sensível ao clique no botão "Acessar"
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            if(TxtMatricula.Text == "")
+            // Testa se usuario entrou com valor nulo no campo de matricula
+            if (TxtMatricula.Text == "")
             {
                 LblStatus.Text = "Informe a matricula";
                 LblStatus.ForeColor = Color.Red;
@@ -29,6 +32,8 @@ namespace SistemaATCTotem
                 return;
             }
             int matricula;
+
+            // Testa se usuario entrou com valor numerico valido no campo de matricula
             if (!int.TryParse(TxtMatricula.Text, out matricula) == true)
             {
                 LblStatus.Text = "A matricula deve conter um valor numérico";
@@ -36,6 +41,7 @@ namespace SistemaATCTotem
                 TxtMatricula.Focus();
                 return;
             }
+            // Testa se usuario entrou com valor nulo no campo de senha
             if (TxtSenha.Text == "")
             {
                 LblStatus.Text = "Informe a senha";
@@ -44,11 +50,18 @@ namespace SistemaATCTotem
                 return;
             }
 
+            // Usa o login e senha entrado pelo usuario para fazer login
             logar("", Convert.ToInt32(TxtMatricula.Text), 0, TxtSenha.Text, "Totem","");
+            // Informa o usuario da verificacao no servidor
             LblStatus.Text = "Verificando dados no serividor";
             LblStatus.ForeColor = Color.Black;
         }
 
+
+        /* logar(nomeUsario, numeroMatricula, indiceBiometria, senha, identificadorDeOrigem, chave)
+         * Funcao responsavel por pegar os dados do cliente e requisitar login para o servidor, alem de conferir e tratar se houve erro
+         * Saida -> ---//---
+         */
         private async void logar(string Usuario, int Matricula, int IndiceBiometria, string Senha, string Origem, string Key)
         {
             API.respostaLogin = await API.Login(Usuario, Matricula, IndiceBiometria, Senha, Origem, Key);

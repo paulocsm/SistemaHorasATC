@@ -12,8 +12,8 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoginBiometria : Form
     {
-        public static FrmLoguinMatricula frmLoguinMatricula;
-        public static FrmCadastroHoras frmCadastroHoras;
+        public static FrmLoguinMatricula frmLoguinMatricula; // Form da tela de login por matrícula
+        public static FrmCadastroHoras frmCadastroHoras;     // Form da tela de cadastro de horas
 
         public FrmLoginBiometria()
         {
@@ -24,9 +24,9 @@ namespace SistemaATCTotem
         private void FrmLoginBiometria_Click(object sender, EventArgs e)
         {
             frmLoguinMatricula = new FrmLoguinMatricula();
-            frmLoguinMatricula.frmbiometriamatricula = this; // 
+            frmLoguinMatricula.frmbiometriamatricula = this; // Passa as informações desse formulário para o formulário de login por matrícula instanciado acima
             frmCadastroHoras = new FrmCadastroHoras();
-            frmCadastroHoras.frmbiometriahoras = this;
+            frmCadastroHoras.frmbiometriahoras = this; // Passa as informações desse formulário para o formulário de login por matrícula instanciado acima
             frmLoguinMatricula.Show();
             this.Hide();
         }
@@ -44,9 +44,9 @@ namespace SistemaATCTotem
         private void PctLogoAtc_Click(object sender, EventArgs e)
         {
             frmLoguinMatricula = new FrmLoguinMatricula();
-            frmLoguinMatricula.frmbiometriamatricula = this;
+            frmLoguinMatricula.frmbiometriamatricula = this; // Passa as informações desse formulário para o formulário de login por matrícula instanciado acima
             frmCadastroHoras = new FrmCadastroHoras();
-            frmCadastroHoras.frmbiometriahoras = this;
+            frmCadastroHoras.frmbiometriahoras = this; // Passa as informações desse formulário para o formulário de login por matrícula instanciado acima
             frmLoguinMatricula.Show();
             this.Hide();
         }
