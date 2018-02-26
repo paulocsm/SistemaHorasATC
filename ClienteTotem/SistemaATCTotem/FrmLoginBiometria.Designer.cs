@@ -55,6 +55,7 @@
             this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PctLogoAtc.TabIndex = 0;
             this.PctLogoAtc.TabStop = false;
+            this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
             // 
             // CmdSimulaBiometria
             // 

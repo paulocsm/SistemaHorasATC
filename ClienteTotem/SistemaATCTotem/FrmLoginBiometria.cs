@@ -43,5 +43,15 @@ namespace SistemaATCTotem
             frmCadastroHoras.Show();
             this.Hide();
         }
+
+        private void PctLogoAtc_Click(object sender, EventArgs e)
+        {
+            frmLoguinMatricula = new FrmLoguinMatricula();
+            frmLoguinMatricula.frmbiometriamatricula = this;
+            frmCadastroHoras = new FrmCadastroHoras();
+            frmCadastroHoras.frmbiometriahoras = this;
+            frmLoguinMatricula.Show();
+            this.Hide();
+        }
     }
 }
