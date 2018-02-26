@@ -12,7 +12,7 @@ namespace SistemaATCTotem
 {
     public partial class FrmLoguinMatricula : Form
     {
-        public Form frmbiometriamatricula { get; set; } // Varável usada para receber os parametros de FormLoginBiometria
+        public Form frmbiometriamatricula { get; set; } // Variável usada para receber os parametros de FormLoginBiometria
 
         // Inicializa a tela
         public FrmLoguinMatricula()
@@ -50,11 +50,18 @@ namespace SistemaATCTotem
                 return;
             }
 
+            // Usa o login e senha entrado pelo usuario para fazer login
             logar("", Convert.ToInt32(TxtMatricula.Text), 0, TxtSenha.Text, "Totem","");
+            // Informa o usuario da verificacao no servidor
             LblStatus.Text = "Verificando dados no servidor";
             LblStatus.ForeColor = Color.Black;
         }
 
+
+        /* logar(nomeUsario, numeroMatricula, indiceBiometria, senha, identificadorDeOrigem, chave)
+         * Funcao responsavel por pegar os dados do cliente e requisitar login para o servidor
+         * Saida -> ---//---
+         */
         private async void logar(string Usuario, int Matricula, int IndiceBiometria, string Senha, string Origem, string Key)
         {
             API.respostaLogin = await API.Login(Usuario, Matricula, IndiceBiometria, Senha, Origem, Key);
