@@ -56,6 +56,7 @@
             this.PctLogoAtc.TabIndex = 0;
             this.PctLogoAtc.TabStop = false;
             this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
+            this.PctLogoAtc.MouseHover += new System.EventHandler(this.PctLogoAtc_MouseHover);
             // 
             // CmdSimulaBiometria
             // 
@@ -100,6 +101,7 @@
             this.Name = "FrmLoginBiometria";
             this.Text = "Form1";
             this.Click += new System.EventHandler(this.FrmLoginBiometria_Click);
+            this.MouseHover += new System.EventHandler(this.FrmLoginBiometria_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
