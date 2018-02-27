@@ -50,5 +50,23 @@ namespace SistemaATCTotem
             frmLoguinMatricula.Show();
             this.Hide();
         }
+
+        // Aparece balão informando o usuário para clicar na logo da Autêntica e fazer login por matrícula
+        private void PctLogoAtc_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(PctLogoAtc, "Clique para fazer login por matrícula");
+        }
+
+        // Aparece balão informando o usuário para clicar na tela e fazer login por matrícula
+        private void FrmLoginBiometria_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(this, "Clique para fazer login por matrícula");
+        }
     }
 }
