@@ -5,3 +5,4 @@
 /ClienteTotem/.vs/SistemaATCTotem/v15/Server/sqlite3
 ClienteTotem/.vs/SistemaATCTotem/v15/.suo
 ClienteTotem/SistemaATCTotem/obj/Debug/SistemaATCTotem.csproj.CoreCompileInputs.cache
+*.cache
