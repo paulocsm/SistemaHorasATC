@@ -213,6 +213,7 @@ namespace SistemaATCTotem
 
         private void AtualizaDataGridView()
         {
+            // Percorre a lista de lançamento de obras, adicionando seus itens no Grid View
             for (int c = 0; c < lancamentoDeHoras.Count; c++)
             {
                 this.DG.Rows.Insert(c, lancamentoDeHoras[c].obra.Codigo, lancamentoDeHoras[c].gerente.Nome,
@@ -220,6 +221,46 @@ namespace SistemaATCTotem
                                     lancamentoDeHoras[c].horaInicio, lancamentoDeHoras[c].dataFim,
                                     lancamentoDeHoras[c].horaFim);
             }
+        }
+
+        private void TxtAno_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(TxtAno, "Selecione o ano da obra");
+        }
+
+        private void TxtNumero_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(TxtNumero, "Selecione o número da obra");
+        }
+
+        private void TxtDescricao_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(TxtDescricao, "Selecione a descrição da obra");
+        }
+
+        private void TxtGerente_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(TxtGerente, "Selecione o gerente responsável pela obra");
+        }
+
+        private void TxtAtividade_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.InitialDelay = 500;
+            tt.ShowAlways = true;
+            tt.SetToolTip(TxtAtividade, "Selecione a atividade que deseja adicionar");
         }
     }
 }
