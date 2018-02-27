@@ -223,6 +223,8 @@ namespace SistemaATCTotem
             }
         }
 
+        // Aparece mensagem em um balão ao passar o mouse sobre itens do formulário
+        #region MouseHover
         private void TxtAno_MouseHover(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
@@ -262,5 +264,6 @@ namespace SistemaATCTotem
             tt.ShowAlways = true;
             tt.SetToolTip(TxtAtividade, "Selecione a atividade que deseja adicionar");
         }
+        #endregion
     }
 }
