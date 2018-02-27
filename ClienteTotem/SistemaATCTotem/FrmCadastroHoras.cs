@@ -14,6 +14,7 @@ namespace SistemaATCTotem
     {
         public Form frmbiometriahoras { get; set; }
         UltimoRegistro ultimoRegistro = new UltimoRegistro();
+        List<LancamentoDeHoras> lancamentoDeHoras = new List<LancamentoDeHoras>(); // Lista dos lnçamentos de horas anteriores
         bool AuxAtualizaTela;
 
         public FrmCadastroHoras()
@@ -29,13 +30,13 @@ namespace SistemaATCTotem
             AtualizaTela();
         }
 
-        private void CmdConfiguracoes_Click(object sender, EventArgs e)
+        private void CmdConfiguracoes_Click(object sender, EventArgs e) // Abre a tela de configurações quando clica no botão
         {
             FrmConfiguracoes frmConfiguracoes = new FrmConfiguracoes();
             frmConfiguracoes.Show(this);
         }
 
-        private void CmdCancelar_Click(object sender, EventArgs e)
+        private void CmdCancelar_Click(object sender, EventArgs e) // Desloga quando clica em cancelar
         {
             Logout("Totem", "", "", 0, API.respostaLogin.Matricula);
         }
@@ -50,11 +51,13 @@ namespace SistemaATCTotem
         {
             AuxAtualizaTela = true;
 
+            // Atualiza os labels do cabeçalho (Matrícula, Nome, Deartamento e Função):
             LblMatricula.Text = API.respostaLogin.Matricula.ToString();
             LblNome.Text = API.respostaLogin.Nome;
             LblDepartamento.Text = API.respostaLogin.Departamento;
             LblFunção.Text = API.respostaLogin.Funcao;
 
+            // Atualiza os campos de data e hora inicial e final:
             TxtDataInicio.Text = DateTime.Now.Date.ToLongDateString();
             TxtHoraInicio.Text = "07:30";
             TxtDataFim.Text = DateTime.Now.Date.ToLongDateString();
@@ -67,13 +70,13 @@ namespace SistemaATCTotem
             int selected = 0;
             for(int i=0; i < ultimoRegistro.gerentes.Length; i++)
             {
-                TxtGerente.Items.Add(ultimoRegistro.gerentes[i].Nome);
-                if (ultimoRegistro.matriculaUltimoGerente == ultimoRegistro.gerentes[i].Matricula)
+                TxtGerente.Items.Add(ultimoRegistro.gerentes[i].Nome); // Adiciona os gerentes na lista do combobox
+                if (ultimoRegistro.matriculaUltimoGerente == ultimoRegistro.gerentes[i].Matricula) // Pega o índice do último gerente
                 {
                     selected = i;
                 }
             }
-            TxtGerente.SelectedIndex = selected;
+            TxtGerente.SelectedIndex = selected; // Seleciona no combobox o último gerente
 
             //Atualiza o combobox de atividades
             TxtAtividade.Items.Clear();
@@ -205,6 +208,17 @@ namespace SistemaATCTotem
                 int Selected = TxtDescricao.SelectedIndex;             
                 TxtNumero.SelectedIndex = Selected;
                 AuxAtualizaTela = false;
+            }
+        }
+
+        private void AtualizaDataGridView()
+        {
+            for (int c = 0; c < lancamentoDeHoras.Count; c++)
+            {
+                this.DG.Rows.Insert(c, lancamentoDeHoras[c].obra.Codigo, lancamentoDeHoras[c].gerente.Nome,
+                                    lancamentoDeHoras[c].atividade.Descricao, lancamentoDeHoras[c].dataInicio,
+                                    lancamentoDeHoras[c].horaInicio, lancamentoDeHoras[c].dataFim,
+                                    lancamentoDeHoras[c].horaFim);
             }
         }
     }
