@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace SistemaATCTotem
 {
    public class API
-    {//asdfasdf
+    {
         static HttpClient Cliente = new HttpClient();
         static string UrlBase = "http://" + Properties.Settings.Default.EndServidor + ":" + Properties.Settings.Default.PortaServidor + "/API/";
         public static RespostaLogin respostaLogin = new RespostaLogin();

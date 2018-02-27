@@ -64,4 +64,14 @@ namespace SistemaATCTotem
         public string Descricao { get; set; }
         public string FuncoesCapacitadas { get; set; }
     }
+
+    public class LancamentoDeObras
+    {
+        public Obras obra { get; set; }
+        public DateTime dataInicio { get; set; }
+        public DateTime dataFim { get; set; }
+        public DateTime horaInicio { get; set; }
+        public DateTime horaFim { get; set; }
+        public Funcionario gerente { get; set; }
+    }
 }
