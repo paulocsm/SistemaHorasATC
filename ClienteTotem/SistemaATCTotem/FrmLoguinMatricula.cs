@@ -13,6 +13,9 @@ namespace SistemaATCTotem
     public partial class FrmLoguinMatricula : Form
     {
         public Form frmbiometriamatricula { get; set; } // Variável usada para receber os parametros de FormLoginBiometria
+        TecladoNumerico teclado = new TecladoNumerico();
+        protected bool tecladoEstaAtivo = false;
+
 
         // Inicializa a tela
         public FrmLoguinMatricula()
@@ -83,6 +86,7 @@ namespace SistemaATCTotem
         private void CmdCancelar_Click(object sender, EventArgs e)
         {
             frmbiometriamatricula.Show();
+            teclado.Close();
             FrmLoginBiometria.frmCadastroHoras.Close();
             this.Close();
         }
@@ -113,5 +117,31 @@ namespace SistemaATCTotem
             }
         }
         #endregion
+
+        private void TxtMatricula_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.TopMost     = false;
+            teclado.TopMost  = true;
+            tecladoEstaAtivo = true;
+        }
+
+        private void TxtSenha_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.TopMost     = false;
+            teclado.TopMost  = true;
+            tecladoEstaAtivo = true;
+        }
+
+        private void FrmLoguinMatricula_Load(object sender, EventArgs e)
+        {
+            teclado.Show();
+        }
+
+        private void FrmLoguinMatricula_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.TopMost     = true;
+            teclado.TopMost  = false;
+            tecladoEstaAtivo = false;
+        }
     }
 }

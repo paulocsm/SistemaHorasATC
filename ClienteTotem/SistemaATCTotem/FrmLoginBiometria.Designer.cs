@@ -56,7 +56,6 @@
             this.PctLogoAtc.TabIndex = 0;
             this.PctLogoAtc.TabStop = false;
             this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
-            this.PctLogoAtc.MouseHover += new System.EventHandler(this.PctLogoAtc_MouseHover);
             // 
             // CmdSimulaBiometria
             // 
