@@ -29,7 +29,7 @@ namespace SistemaATCTotem
             TmrData.Start();
             AtualizaTela();
             // Cria tabela de dados de atividade
-            lancamentoDeHoras.Columns.Add("CodObra", typeof(int));
+            lancamentoDeHoras.Columns.Add("CodObra", typeof(string));
             lancamentoDeHoras.Columns.Add("GerenteResponsavel", typeof(string));
             lancamentoDeHoras.Columns.Add("AtividadeDesenvolvida", typeof(string));
             lancamentoDeHoras.Columns.Add("DataInicio", typeof(DateTime));
@@ -282,7 +282,7 @@ namespace SistemaATCTotem
             DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
 
             // Pega todas as informações selecionadas pelo usuário no formulário
-            linha["CodObra"] = TxtNumero.Text;
+            linha["CodObra"] = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
             linha["GerenteResponsavel"] = TxtGerente.Text;
             linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
             linha["DataInicio"] = TxtDataInicio.Text;
