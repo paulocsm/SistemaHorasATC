@@ -32,9 +32,9 @@ namespace SistemaATCTotem
             lancamentoDeHoras.Columns.Add("CodObra", typeof(string));
             lancamentoDeHoras.Columns.Add("GerenteResponsavel", typeof(string));
             lancamentoDeHoras.Columns.Add("AtividadeDesenvolvida", typeof(string));
-            lancamentoDeHoras.Columns.Add("DataInicio", typeof(DateTime));
+            lancamentoDeHoras.Columns.Add("DataInicio", typeof(string));
             lancamentoDeHoras.Columns.Add("HoraInicio", typeof(string));
-            lancamentoDeHoras.Columns.Add("DataFim", typeof(DateTime));
+            lancamentoDeHoras.Columns.Add("DataFim", typeof(string));
             lancamentoDeHoras.Columns.Add("HoraFim", typeof(string));
         }
 
@@ -281,13 +281,19 @@ namespace SistemaATCTotem
             // Preenche a tabela de dados da atividade:
             DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
 
+            // Pega apenas a data dos campos dataInicio e dataFim
+            var aux = Convert.ToDateTime(TxtDataInicio.Text);
+            var dataInicio = aux.Date;
+            aux = Convert.ToDateTime(TxtDataFim.Text);
+            var dataFim = aux.Date;
+
             // Pega todas as informações selecionadas pelo usuário no formulário
             linha["CodObra"] = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
             linha["GerenteResponsavel"] = TxtGerente.Text;
             linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
-            linha["DataInicio"] = TxtDataInicio.Text;
+            linha["DataInicio"] = dataInicio.ToString().Replace(" 12:00:00 AM","");
             linha["HoraInicio"] = TxtHoraInicio.Text;
-            linha["DataFim"] = TxtDataFim.Text;
+            linha["DataFim"] = dataFim.ToString().Replace(" 12:00:00 AM", "");
             linha["HoraFim"] = TxtHoraFim.Text;
 
             lancamentoDeHoras.Rows.Add(linha); // Adiciona as informações na tabela
