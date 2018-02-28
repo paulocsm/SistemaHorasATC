@@ -14,17 +14,35 @@ namespace SistemaATCTotem
     {
         // Variáveis de Projeto
         public bool teveMudanca; // Indica se o usuário clicou em algum dos botões do teclado
-        private char digito;     // Valor do botão clicado
+        protected char digito;     // Valor do botão
+        protected int quemMeChamou; // 1: TxtMatricula, 2: TxtSenha
 
         public TecladoNumerico()
         {
             InitializeComponent();
         }
 
+        public void salvaQuemChamou(int aux)
+        {
+            this.quemMeChamou = aux;
+        }
+
+        //
+        //
+        // CONTINUAR A PARTIR DAQUI
+        //
+        //
         private void button1_Click(object sender, EventArgs e)
         {
             teveMudanca = true;
             digito = '1';
+            switch (quemMeChamou)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

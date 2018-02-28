@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaATCTotem
@@ -14,7 +8,6 @@ namespace SistemaATCTotem
     {
         public Form frmbiometriamatricula { get; set; } // Variável usada para receber os parametros de FormLoginBiometria
         TecladoNumerico teclado = new TecladoNumerico();
-        protected bool tecladoEstaAtivo = false;
 
 
         // Inicializa a tela
@@ -78,6 +71,7 @@ namespace SistemaATCTotem
                 else
                 {
                     FrmLoginBiometria.frmCadastroHoras.Show();
+                    teclado.Close();
                     this.Close();
                 }
             }
@@ -118,30 +112,30 @@ namespace SistemaATCTotem
         }
         #endregion
 
-        private void TxtMatricula_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.TopMost     = false;
-            teclado.TopMost  = true;
-            tecladoEstaAtivo = true;
-        }
-
-        private void TxtSenha_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.TopMost     = false;
-            teclado.TopMost  = true;
-            tecladoEstaAtivo = true;
-        }
-
         private void FrmLoguinMatricula_Load(object sender, EventArgs e)
         {
             teclado.Show();
         }
 
+        // Mostra teclado em primeiro plano quando o campo é clicado
+        private void TxtMatricula_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.TopMost     = false;
+            teclado.TopMost  = true;
+        }
+
+        // Mostra teclado em primeiro plano quando o campo é clicado
+        private void TxtSenha_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.TopMost     = false;
+            teclado.TopMost  = true;
+        }
+
+        // Mostra teclado em primeiro plano quando o campo é clicado
         private void FrmLoguinMatricula_MouseClick(object sender, MouseEventArgs e)
         {
             this.TopMost     = true;
             teclado.TopMost  = false;
-            tecladoEstaAtivo = false;
         }
     }
 }
