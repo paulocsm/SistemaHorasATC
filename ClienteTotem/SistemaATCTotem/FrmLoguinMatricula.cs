@@ -87,9 +87,5 @@ namespace SistemaATCTotem
             this.Close();
         }
 
-        private void FrmLoguinMatricula_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

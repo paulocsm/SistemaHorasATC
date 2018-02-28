@@ -133,6 +133,8 @@ namespace SistemaATCTotem
             }
             TxtNumero.SelectedIndex = selected;
 
+            AtualizaDataGridView(); // Atualiza o data grid
+
             //Atualiza o combobox de Descrição
             selected = 0;
             TxtDescricao.Items.Clear();

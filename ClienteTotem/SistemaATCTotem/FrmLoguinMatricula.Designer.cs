@@ -145,7 +145,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLoguinMatricula";
             this.Text = "FrmLoguinMatricula";
-            this.Load += new System.EventHandler(this.FrmLoguinMatricula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
