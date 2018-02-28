@@ -87,5 +87,31 @@ namespace SistemaATCTotem
             this.Close();
         }
 
+        // Faz login quando usuário aperta enter
+        #region SensibilidadeAoEnter
+        private void TxtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CmdLogin_Click(sender, e);
+            }
+        }
+
+        private void TxtMatricula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CmdLogin_Click(sender, e);
+            }
+        }
+
+        private void FrmLoguinMatricula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CmdLogin_Click(sender, e);
+            }
+        }
+        #endregion
     }
 }

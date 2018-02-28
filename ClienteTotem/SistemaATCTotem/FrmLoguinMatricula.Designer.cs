@@ -48,6 +48,7 @@
             this.TxtMatricula.Size = new System.Drawing.Size(242, 46);
             this.TxtMatricula.TabIndex = 4;
             this.TxtMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMatricula_KeyPress);
             // 
             // label2
             // 
@@ -81,6 +82,7 @@
             this.TxtSenha.Size = new System.Drawing.Size(242, 46);
             this.TxtSenha.TabIndex = 6;
             this.TxtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSenha_KeyPress);
             // 
             // CmdLogin
             // 
@@ -145,6 +147,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLoguinMatricula";
             this.Text = "FrmLoguinMatricula";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmLoguinMatricula_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
