@@ -14,7 +14,7 @@ namespace SistemaATCTotem
     {
         public Form frmbiometriahoras { get; set; }
         UltimoRegistro ultimoRegistro = new UltimoRegistro();
-        List<LancamentoDeHoras> lancamentoDeHoras = new List<LancamentoDeHoras>(); // Lista dos lnçamentos de horas anteriores
+        DataTable lancamentoDeHoras = new DataTable(); // Tabela de dados dos lançamentos de horas anteriores
         bool AuxAtualizaTela;
 
         public FrmCadastroHoras()
@@ -28,6 +28,14 @@ namespace SistemaATCTotem
             LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
             TmrData.Start();
             AtualizaTela();
+            // Cria tabela de dados de atividade
+            lancamentoDeHoras.Columns.Add("CodObra", typeof(int));
+            lancamentoDeHoras.Columns.Add("GerenteResponsavel", typeof(string));
+            lancamentoDeHoras.Columns.Add("AtividadeDesenvolvida", typeof(string));
+            lancamentoDeHoras.Columns.Add("DataInicio", typeof(DateTime));
+            lancamentoDeHoras.Columns.Add("HoraInicio", typeof(string));
+            lancamentoDeHoras.Columns.Add("DataFim", typeof(DateTime));
+            lancamentoDeHoras.Columns.Add("HoraFim", typeof(string));
         }
 
         private void CmdConfiguracoes_Click(object sender, EventArgs e) // Abre a tela de configurações quando clica no botão
@@ -133,8 +141,6 @@ namespace SistemaATCTotem
             }
             TxtNumero.SelectedIndex = selected;
 
-            AtualizaDataGridView(); // Atualiza o data grid
-
             //Atualiza o combobox de Descrição
             selected = 0;
             TxtDescricao.Items.Clear();
@@ -216,13 +222,14 @@ namespace SistemaATCTotem
         private void AtualizaDataGridView()
         {
             // Percorre a lista de lançamento de obras, adicionando seus itens no Grid View
-            for (int c = 0; c < lancamentoDeHoras.Count; c++)
-            {
-                this.DG.Rows.Insert(c, lancamentoDeHoras[c].obra.Codigo, lancamentoDeHoras[c].gerente.Nome,
-                                    lancamentoDeHoras[c].atividade.Descricao, lancamentoDeHoras[c].dataInicio,
-                                    lancamentoDeHoras[c].horaInicio, lancamentoDeHoras[c].dataFim,
-                                    lancamentoDeHoras[c].horaFim);
-            }
+            this.DG.Rows.Insert(lancamentoDeHoras.Rows.Count - 1,
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][0],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][1],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][2],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][3],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][4],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][5],
+                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][6]);
         }
 
         // Aparece mensagem em um balão ao passar o mouse sobre itens do formulário
@@ -267,5 +274,25 @@ namespace SistemaATCTotem
             tt.SetToolTip(TxtAtividade, "Selecione a atividade que deseja adicionar");
         }
         #endregion
+
+        // Pega as informações colocadas pelo usuário no formulário, salva na tabela e mostra no DataGrid
+        private void CmdAdicionarAtividade_Click(object sender, EventArgs e)
+        {
+            // Preenche a tabela de dados da atividade:
+            DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
+
+            // Pega todas as informações selecionadas pelo usuário no formulário
+            linha["CodObra"] = TxtNumero.Text;
+            linha["GerenteResponsavel"] = TxtGerente.Text;
+            linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
+            linha["DataInicio"] = TxtDataInicio.Text;
+            linha["HoraInicio"] = TxtHoraInicio.Text;
+            linha["DataFim"] = TxtDataFim.Text;
+            linha["HoraFim"] = TxtHoraFim.Text;
+
+            lancamentoDeHoras.Rows.Add(linha); // Adiciona as informações na tabela
+
+            AtualizaDataGridView(); // Atualiza o data grid na tela
+        }
     }
 }

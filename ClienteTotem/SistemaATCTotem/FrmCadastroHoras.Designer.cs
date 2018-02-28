@@ -597,6 +597,7 @@
             this.CmdAdicionarAtividade.TabIndex = 38;
             this.CmdAdicionarAtividade.Text = "Adicionar Atividade";
             this.CmdAdicionarAtividade.UseVisualStyleBackColor = false;
+            this.CmdAdicionarAtividade.Click += new System.EventHandler(this.CmdAdicionarAtividade_Click);
             // 
             // FrmCadastroHoras
             // 

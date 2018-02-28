@@ -37,7 +37,7 @@ namespace SistemaATCTotem.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5220")]
+        [global::System.Configuration.DefaultSettingValueAttribute("52092")]
         public int PortaServidor {
             get {
                 return ((int)(this["PortaServidor"]));

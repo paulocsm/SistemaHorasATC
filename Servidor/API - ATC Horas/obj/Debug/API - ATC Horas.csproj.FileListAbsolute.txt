@@ -112,3 +112,60 @@ C:\Users\Paulo César\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\
 C:\Users\Paulo César\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.csproj.CoreCompileInputs.cache
 C:\Users\Paulo César\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.dll
 C:\Users\Paulo César\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.pdb
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\ApplicationInsights.config
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\API - ATC Horas.dll.config
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\API - ATC Horas.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\API - ATC Horas.pdb
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Antlr3.Runtime.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\EntityFramework.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\EntityFramework.SqlServer.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.Web.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Newtonsoft.Json.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Data.SQLite.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Data.SQLite.EF6.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Data.SQLite.Linq.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Net.Http.Formatting.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Helpers.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Http.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Http.WebHost.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Mvc.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Optimization.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Razor.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.Razor.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\WebGrease.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\EntityFramework.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\EntityFramework.SqlServer.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Data.SQLite.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Data.SQLite.dll.config
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Newtonsoft.Json.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Net.Http.Formatting.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Helpers.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Http.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Http.WebHost.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Mvc.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Optimization.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.Razor.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\System.Web.WebPages.Razor.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Antlr3.Runtime.pdb
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\bin\Microsoft.AI.Web.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.csprojResolveAssemblyReference.cache
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.csproj.CoreCompileInputs.cache
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\Servidor\API - ATC Horas\obj\Debug\API - ATC Horas.pdb
