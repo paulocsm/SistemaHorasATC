@@ -25,7 +25,7 @@ namespace SistemaATCTotem
         private void FrmCadastroHoras_Load(object sender, EventArgs e)
         {
             //Atualiza a label de data e hora
-            LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
+            LblData.Text = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
             TmrData.Start();
             AtualizaTela();
             // Cria tabela de dados de atividade
@@ -52,7 +52,7 @@ namespace SistemaATCTotem
         private void TmrData_Tick(object sender, EventArgs e)
         {
             //Atualiza a label de data e hora
-            LblData.Text = DateTime.Now.ToShortDateString() + " -- " + DateTime.Now.ToLongTimeString();
+            LblData.Text = DateTime.Now.ToString("dd/MM/yyyy - HH:mm:ss");
         }
 
         private async void AtualizaTela()
@@ -67,7 +67,7 @@ namespace SistemaATCTotem
 
             // Atualiza os campos de data e hora inicial e final:
             TxtDataInicio.Text = DateTime.Now.ToString();
-            //TxtHoraInicio.Text = DateTime.Now.TimeOfDay.ToString();
+            TxtHoraInicio.Text = DateTime.Now.TimeOfDay.ToString();
             TxtDataFim.Text    = DateTime.Now.Date.ToLongDateString();
             TxtHoraFim.Text    = DateTime.Now.TimeOfDay.ToString();
 
@@ -282,19 +282,17 @@ namespace SistemaATCTotem
             DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
 
             // Pega apenas a data dos campos dataInicio e dataFim
-            var aux = Convert.ToDateTime(TxtDataInicio.Text);
-            var dataInicio = aux.Date;
-            aux = Convert.ToDateTime(TxtDataFim.Text);
-            var dataFim = aux.Date;
+            var dataInicio = TxtDataInicio.Text;
+            var dataFim    = TxtDataFim.Text;
 
             // Pega todas as informações selecionadas pelo usuário no formulário
-            linha["CodObra"] = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
-            linha["GerenteResponsavel"] = TxtGerente.Text;
+            linha["CodObra"]               = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
+            linha["GerenteResponsavel"]    = TxtGerente.Text;
             linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
-            linha["DataInicio"] = dataInicio.ToString().Replace(" 12:00:00 AM","");
-            //linha["HoraInicio"] = TxtHoraInicio.Text;
-            linha["DataFim"] = dataFim.ToString().Replace(" 12:00:00 AM", "");
-            linha["HoraFim"] = TxtHoraFim.Text;
+            linha["DataInicio"]            = dataInicio.ToString();
+            linha["HoraInicio"]            = TxtHoraInicio.Text;
+            linha["DataFim"]               = dataFim.ToString();
+            linha["HoraFim"]               = TxtHoraFim.Text;
 
             lancamentoDeHoras.Rows.Add(linha); // Adiciona as informações na tabela
 

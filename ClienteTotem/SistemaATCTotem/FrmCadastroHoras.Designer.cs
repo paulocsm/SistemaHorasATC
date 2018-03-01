@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.CmdFinalizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.TxtAno = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtHoraFim = new System.Windows.Forms.DateTimePicker();
+            this.TxtHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtAtividade = new System.Windows.Forms.ComboBox();
             this.TxtDataInicio = new System.Windows.Forms.DateTimePicker();
@@ -77,8 +79,6 @@
             this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmdAdicionarAtividade = new System.Windows.Forms.Button();
             this.CmdRemoverAtividade = new System.Windows.Forms.Button();
-            this.TxtHoraFim = new System.Windows.Forms.DateTimePicker();
-            this.TxtHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -245,6 +245,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1342, 106);
             this.panel2.TabIndex = 23;
+            // 
+            // TxtHoraFim
+            // 
+            this.TxtHoraFim.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtHoraFim.CustomFormat = "HH:mm";
+            this.TxtHoraFim.Font = new System.Drawing.Font("Calibri", 20F);
+            this.TxtHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtHoraFim.Location = new System.Drawing.Point(1201, 39);
+            this.TxtHoraFim.Name = "TxtHoraFim";
+            this.TxtHoraFim.ShowUpDown = true;
+            this.TxtHoraFim.Size = new System.Drawing.Size(124, 40);
+            this.TxtHoraFim.TabIndex = 39;
+            this.TxtHoraFim.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
+            // 
+            // TxtHoraInicio
+            // 
+            this.TxtHoraInicio.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtHoraInicio.CustomFormat = "HH:mm";
+            this.TxtHoraInicio.Font = new System.Drawing.Font("Calibri", 20F);
+            this.TxtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtHoraInicio.Location = new System.Drawing.Point(888, 39);
+            this.TxtHoraInicio.Name = "TxtHoraInicio";
+            this.TxtHoraInicio.ShowUpDown = true;
+            this.TxtHoraInicio.Size = new System.Drawing.Size(124, 40);
+            this.TxtHoraInicio.TabIndex = 38;
+            this.TxtHoraInicio.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -498,14 +524,14 @@
             // DG
             // 
             this.DG.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodObra,
@@ -515,14 +541,14 @@
             this.HoraInicio,
             this.DataFinal,
             this.HoraFinal});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle4;
             this.DG.Location = new System.Drawing.Point(10, 434);
             this.DG.MultiSelect = false;
             this.DG.Name = "DG";
@@ -596,32 +622,6 @@
             this.CmdRemoverAtividade.Text = "Remover Atividade";
             this.CmdRemoverAtividade.UseVisualStyleBackColor = false;
             this.CmdRemoverAtividade.Click += new System.EventHandler(this.CmdRemoverAtividade_Click);
-            // 
-            // TxtHoraFim
-            // 
-            this.TxtHoraFim.CalendarFont = new System.Drawing.Font("Calibri", 24F);
-            this.TxtHoraFim.CustomFormat = "hh:mm";
-            this.TxtHoraFim.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TxtHoraFim.Location = new System.Drawing.Point(1201, 39);
-            this.TxtHoraFim.Name = "TxtHoraFim";
-            this.TxtHoraFim.ShowUpDown = true;
-            this.TxtHoraFim.Size = new System.Drawing.Size(124, 40);
-            this.TxtHoraFim.TabIndex = 39;
-            this.TxtHoraFim.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
-            // 
-            // TxtHoraInicio
-            // 
-            this.TxtHoraInicio.CalendarFont = new System.Drawing.Font("Calibri", 24F);
-            this.TxtHoraInicio.CustomFormat = "hh:mm";
-            this.TxtHoraInicio.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TxtHoraInicio.Location = new System.Drawing.Point(888, 39);
-            this.TxtHoraInicio.Name = "TxtHoraInicio";
-            this.TxtHoraInicio.ShowUpDown = true;
-            this.TxtHoraInicio.Size = new System.Drawing.Size(124, 40);
-            this.TxtHoraInicio.TabIndex = 38;
-            this.TxtHoraInicio.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
             // 
             // FrmCadastroHoras
             // 

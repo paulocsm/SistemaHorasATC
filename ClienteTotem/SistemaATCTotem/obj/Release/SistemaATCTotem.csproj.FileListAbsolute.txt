@@ -1,0 +1,15 @@
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Release\SistemaATCTotem.exe.config
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Release\SistemaATCTotem.exe
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Release\SistemaATCTotem.pdb
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Release\Newtonsoft.Json.dll
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\bin\Release\Newtonsoft.Json.xml
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.TecladoNumerico.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.FrmCadastroHoras.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.FrmConfiguracoes.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.FrmLoginBiometria.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.FrmLoguinMatricula.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.Properties.Resources.resources
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.csproj.GenerateResource.Cache
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.csproj.CoreCompileInputs.cache
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.exe
+C:\Users\Estagio Autentica\source\repos\SistemaHorasATC\ClienteTotem\SistemaATCTotem\obj\Release\SistemaATCTotem.pdb
