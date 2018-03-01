@@ -31,15 +31,6 @@ namespace SistemaATCTotem
             this.Hide();
         }
 
-        //Gambirra. REMOVER
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmCadastroHoras = new FrmCadastroHoras();
-            frmCadastroHoras.frmbiometriahoras = this;
-            frmCadastroHoras.Show();
-            this.Hide();
-        }
-
         //Abre tela de login ao clicar por cima da imagem
         private void PctLogoAtc_Click(object sender, EventArgs e)
         {
@@ -60,6 +51,11 @@ namespace SistemaATCTotem
             tt.UseFading = true;
             tt.ShowAlways   = true;
             tt.SetToolTip(this, "Clique para fazer login por matrícula");
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

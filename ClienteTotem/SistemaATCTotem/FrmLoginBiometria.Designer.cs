@@ -30,9 +30,10 @@
         {
             this.LblStatus = new System.Windows.Forms.Label();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
-            this.CmdSimulaBiometria = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
+            this.CmdConfiguracoes = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,16 +58,6 @@
             this.PctLogoAtc.TabStop = false;
             this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
             // 
-            // CmdSimulaBiometria
-            // 
-            this.CmdSimulaBiometria.Location = new System.Drawing.Point(1161, 545);
-            this.CmdSimulaBiometria.Name = "CmdSimulaBiometria";
-            this.CmdSimulaBiometria.Size = new System.Drawing.Size(133, 129);
-            this.CmdSimulaBiometria.TabIndex = 2;
-            this.CmdSimulaBiometria.Text = "Simula biometria";
-            this.CmdSimulaBiometria.UseVisualStyleBackColor = true;
-            this.CmdSimulaBiometria.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -83,6 +74,32 @@
             this.TxtId.Size = new System.Drawing.Size(100, 20);
             this.TxtId.TabIndex = 4;
             // 
+            // CmdConfiguracoes
+            // 
+            this.CmdConfiguracoes.BackColor = System.Drawing.Color.Gray;
+            this.CmdConfiguracoes.Font = new System.Drawing.Font("Calibri", 22F);
+            this.CmdConfiguracoes.ForeColor = System.Drawing.Color.White;
+            this.CmdConfiguracoes.Location = new System.Drawing.Point(1140, 542);
+            this.CmdConfiguracoes.Name = "CmdConfiguracoes";
+            this.CmdConfiguracoes.Size = new System.Drawing.Size(169, 134);
+            this.CmdConfiguracoes.TabIndex = 38;
+            this.CmdConfiguracoes.Text = "Simula Biometria";
+            this.CmdConfiguracoes.UseVisualStyleBackColor = false;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = global::SistemaATCTotem.Properties.Resources.close__1_;
+            this.btnFechar.Location = new System.Drawing.Point(1307, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(59, 27);
+            this.btnFechar.TabIndex = 39;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // FrmLoginBiometria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,9 +107,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
             this.ControlBox = false;
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.CmdConfiguracoes);
             this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CmdSimulaBiometria);
             this.Controls.Add(this.LblStatus);
             this.Controls.Add(this.PctLogoAtc);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -111,9 +129,10 @@
 
         private System.Windows.Forms.PictureBox PctLogoAtc;
         private System.Windows.Forms.Label LblStatus;
-        private System.Windows.Forms.Button CmdSimulaBiometria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.Button CmdConfiguracoes;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
 

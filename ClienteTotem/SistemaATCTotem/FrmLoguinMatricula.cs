@@ -137,5 +137,16 @@ namespace SistemaATCTotem
            // this.TopMost     = true;
           //  teclado.TopMost  = false;
         }
+
+        private void CmdConfiguracoes_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracoes frmConfiguracoes = new FrmConfiguracoes();
+            frmConfiguracoes.Show(this);
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

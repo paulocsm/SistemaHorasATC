@@ -36,6 +36,8 @@
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.LblStatus = new System.Windows.Forms.Label();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
+            this.CmdConfiguracoes = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,12 +134,41 @@
             this.PctLogoAtc.TabIndex = 2;
             this.PctLogoAtc.TabStop = false;
             // 
+            // CmdConfiguracoes
+            // 
+            this.CmdConfiguracoes.BackColor = System.Drawing.Color.Gray;
+            this.CmdConfiguracoes.Font = new System.Drawing.Font("Calibri", 22F);
+            this.CmdConfiguracoes.ForeColor = System.Drawing.Color.White;
+            this.CmdConfiguracoes.Location = new System.Drawing.Point(1121, 639);
+            this.CmdConfiguracoes.Name = "CmdConfiguracoes";
+            this.CmdConfiguracoes.Size = new System.Drawing.Size(201, 72);
+            this.CmdConfiguracoes.TabIndex = 37;
+            this.CmdConfiguracoes.Text = "Configurações";
+            this.CmdConfiguracoes.UseVisualStyleBackColor = false;
+            this.CmdConfiguracoes.Click += new System.EventHandler(this.CmdConfiguracoes_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = global::SistemaATCTotem.Properties.Resources.close__1_;
+            this.btnFechar.Location = new System.Drawing.Point(1307, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(59, 27);
+            this.btnFechar.TabIndex = 40;
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // FrmLoguinMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.CmdConfiguracoes);
             this.Controls.Add(this.CmdCancelar);
             this.Controls.Add(this.CmdLogin);
             this.Controls.Add(this.label3);
@@ -167,5 +198,7 @@
         private System.Windows.Forms.Button CmdLogin;
         private System.Windows.Forms.Button CmdCancelar;
         private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.Button CmdConfiguracoes;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
