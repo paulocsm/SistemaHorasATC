@@ -309,18 +309,8 @@ namespace SistemaATCTotem
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                if(DG.SelectedRows.Count > 1)
-                    for (int i = 0; i < DG.SelectedRows.Count; i++)
-                    {
-                        // int selecionado = DG.CurrentCell.RowIndex;    // Pega a linha selecionada no data grid
-                        DG.Rows.RemoveAt(i);                // Remove a atividade do data grid
-                        lancamentoDeHoras.Rows.RemoveAt(i); // Remove a atividade do data table
-                    }
-                else
-                {
-                    DG.Rows.RemoveAt(DG.CurrentCell.RowIndex);                // Remove a atividade do data grid
-                    lancamentoDeHoras.Rows.RemoveAt(DG.CurrentCell.RowIndex); // Remove a atividade do data table
-                }
+                DG.Rows.RemoveAt(DG.CurrentCell.RowIndex);                // Remove a atividade do data grid
+                lancamentoDeHoras.Rows.RemoveAt(DG.CurrentCell.RowIndex); // Remove a atividade do data table
             }
         }
     }
