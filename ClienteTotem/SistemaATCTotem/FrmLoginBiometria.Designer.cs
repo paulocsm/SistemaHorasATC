@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LblStatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFechar.BackColor = System.Drawing.Color.Gray;
             this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,12 +111,16 @@
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.Image = global::SistemaATCTotem.Properties.Resources.line;
-            this.btnMinimizar.Location = new System.Drawing.Point(1248, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1247, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(59, 27);
             this.btnMinimizar.TabIndex = 42;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Tag = "";
             // 
             // FrmLoginBiometria
             // 
@@ -151,6 +157,7 @@
         private System.Windows.Forms.Button CmdConfiguracoes;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

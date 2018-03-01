@@ -146,7 +146,7 @@
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.Image = global::SistemaATCTotem.Properties.Resources.line;
-            this.btnMinimizar.Location = new System.Drawing.Point(1248, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1247, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(59, 27);
             this.btnMinimizar.TabIndex = 41;
@@ -155,7 +155,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFechar.BackColor = System.Drawing.Color.Gray;
             this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

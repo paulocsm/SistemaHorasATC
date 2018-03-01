@@ -43,15 +43,6 @@ namespace SistemaATCTotem
         }
 
         // Aparece balão informando o usuário para clicar na tela e fazer login por matrícula
-        private void FrmLoginBiometria_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tt = new ToolTip();
-            tt.InitialDelay = 500;
-            tt.AutoPopDelay = 5000;
-            tt.UseFading = true;
-            tt.ShowAlways   = true;
-            tt.SetToolTip(this, "Clique para fazer login por matrícula");
-        }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -61,6 +52,11 @@ namespace SistemaATCTotem
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmLoginBiometria_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(this, "Clique na tela para fazer login por matrícula");
         }
     }
 }
