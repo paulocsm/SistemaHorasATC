@@ -114,28 +114,28 @@ namespace SistemaATCTotem
 
         private void FrmLoguinMatricula_Load(object sender, EventArgs e)
         {
-            teclado.Show();
+           //teclado.Show();
         }
 
         // Mostra teclado em primeiro plano quando o campo é clicado
         private void TxtMatricula_MouseClick(object sender, MouseEventArgs e)
         {
-            this.TopMost     = false;
-            teclado.TopMost  = true;
+           // this.TopMost     = false;
+           // teclado.TopMost  = true;
         }
 
         // Mostra teclado em primeiro plano quando o campo é clicado
         private void TxtSenha_MouseClick(object sender, MouseEventArgs e)
         {
-            this.TopMost     = false;
-            teclado.TopMost  = true;
+           // this.TopMost     = false;
+           // teclado.TopMost  = true;
         }
 
         // Mostra teclado em primeiro plano quando o campo é clicado
         private void FrmLoguinMatricula_MouseClick(object sender, MouseEventArgs e)
         {
-            this.TopMost     = true;
-            teclado.TopMost  = false;
+           // this.TopMost     = true;
+          //  teclado.TopMost  = false;
         }
     }
 }
