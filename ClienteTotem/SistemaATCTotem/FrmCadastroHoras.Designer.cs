@@ -45,13 +45,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtHoraFim = new System.Windows.Forms.MaskedTextBox();
             this.TxtAtividade = new System.Windows.Forms.ComboBox();
             this.TxtDataInicio = new System.Windows.Forms.DateTimePicker();
             this.TxtDataFim = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.LblHora = new System.Windows.Forms.Label();
-            this.TxtHoraInicio = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -79,6 +77,8 @@
             this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmdAdicionarAtividade = new System.Windows.Forms.Button();
             this.CmdRemoverAtividade = new System.Windows.Forms.Button();
+            this.TxtHoraFim = new System.Windows.Forms.DateTimePicker();
+            this.TxtHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -230,14 +230,14 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TxtHoraFim);
+            this.panel2.Controls.Add(this.TxtHoraInicio);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TxtAtividade);
             this.panel2.Controls.Add(this.TxtDataInicio);
             this.panel2.Controls.Add(this.TxtDataFim);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.LblHora);
-            this.panel2.Controls.Add(this.TxtHoraInicio);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.ForeColor = System.Drawing.Color.White;
@@ -257,16 +257,6 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Atividade";
             // 
-            // TxtHoraFim
-            // 
-            this.TxtHoraFim.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtHoraFim.Location = new System.Drawing.Point(1201, 39);
-            this.TxtHoraFim.Mask = "00:00";
-            this.TxtHoraFim.Name = "TxtHoraFim";
-            this.TxtHoraFim.Size = new System.Drawing.Size(124, 40);
-            this.TxtHoraFim.TabIndex = 22;
-            this.TxtHoraFim.ValidatingType = typeof(System.DateTime);
-            // 
             // TxtAtividade
             // 
             this.TxtAtividade.Font = new System.Drawing.Font("Calibri", 20F);
@@ -280,8 +270,9 @@
             // TxtDataInicio
             // 
             this.TxtDataInicio.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtDataInicio.CustomFormat = "dd/MM/yyyy";
             this.TxtDataInicio.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TxtDataInicio.Location = new System.Drawing.Point(712, 39);
             this.TxtDataInicio.Name = "TxtDataInicio";
             this.TxtDataInicio.Size = new System.Drawing.Size(170, 40);
@@ -291,8 +282,9 @@
             // TxtDataFim
             // 
             this.TxtDataFim.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtDataFim.CustomFormat = "dd/MM/yyyy";
             this.TxtDataFim.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtDataFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TxtDataFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TxtDataFim.Location = new System.Drawing.Point(1018, 39);
             this.TxtDataFim.Name = "TxtDataFim";
             this.TxtDataFim.Size = new System.Drawing.Size(177, 40);
@@ -320,16 +312,6 @@
             this.LblHora.Size = new System.Drawing.Size(130, 33);
             this.LblHora.TabIndex = 15;
             this.LblHora.Text = "Hora inicio";
-            // 
-            // TxtHoraInicio
-            // 
-            this.TxtHoraInicio.Font = new System.Drawing.Font("Calibri", 20F);
-            this.TxtHoraInicio.Location = new System.Drawing.Point(888, 39);
-            this.TxtHoraInicio.Mask = "00:00";
-            this.TxtHoraInicio.Name = "TxtHoraInicio";
-            this.TxtHoraInicio.Size = new System.Drawing.Size(124, 40);
-            this.TxtHoraInicio.TabIndex = 21;
-            this.TxtHoraInicio.ValidatingType = typeof(System.DateTime);
             // 
             // label9
             // 
@@ -515,6 +497,7 @@
             // 
             // DG
             // 
+            this.DG.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -614,6 +597,32 @@
             this.CmdRemoverAtividade.UseVisualStyleBackColor = false;
             this.CmdRemoverAtividade.Click += new System.EventHandler(this.CmdRemoverAtividade_Click);
             // 
+            // TxtHoraFim
+            // 
+            this.TxtHoraFim.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtHoraFim.CustomFormat = "hh:mm";
+            this.TxtHoraFim.Font = new System.Drawing.Font("Calibri", 20F);
+            this.TxtHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtHoraFim.Location = new System.Drawing.Point(1201, 39);
+            this.TxtHoraFim.Name = "TxtHoraFim";
+            this.TxtHoraFim.ShowUpDown = true;
+            this.TxtHoraFim.Size = new System.Drawing.Size(124, 40);
+            this.TxtHoraFim.TabIndex = 39;
+            this.TxtHoraFim.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
+            // 
+            // TxtHoraInicio
+            // 
+            this.TxtHoraInicio.CalendarFont = new System.Drawing.Font("Calibri", 24F);
+            this.TxtHoraInicio.CustomFormat = "hh:mm";
+            this.TxtHoraInicio.Font = new System.Drawing.Font("Calibri", 20F);
+            this.TxtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtHoraInicio.Location = new System.Drawing.Point(888, 39);
+            this.TxtHoraInicio.Name = "TxtHoraInicio";
+            this.TxtHoraInicio.ShowUpDown = true;
+            this.TxtHoraInicio.Size = new System.Drawing.Size(124, 40);
+            this.TxtHoraInicio.TabIndex = 38;
+            this.TxtHoraInicio.Value = new System.DateTime(2018, 2, 6, 0, 0, 0, 0);
+            // 
             // FrmCadastroHoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,8 +697,6 @@
         private System.Windows.Forms.ComboBox TxtAno;
         private System.Windows.Forms.DateTimePicker TxtDataInicio;
         private System.Windows.Forms.DateTimePicker TxtDataFim;
-        private System.Windows.Forms.MaskedTextBox TxtHoraInicio;
-        private System.Windows.Forms.MaskedTextBox TxtHoraFim;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox PctLogoAtc;
         private System.Windows.Forms.Button CmdConfiguracoes;
@@ -706,5 +713,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
         private System.Windows.Forms.Button CmdRemoverAtividade;
+        private System.Windows.Forms.DateTimePicker TxtHoraFim;
+        private System.Windows.Forms.DateTimePicker TxtHoraInicio;
     }
 }

@@ -66,11 +66,11 @@ namespace SistemaATCTotem
             LblFunção.Text = API.respostaLogin.Funcao;
 
             // Atualiza os campos de data e hora inicial e final:
-            TxtDataInicio.Text = DateTime.Now.Date.ToLongDateString();
-            TxtHoraInicio.Text = "07:30";
-            TxtDataFim.Text = DateTime.Now.Date.ToLongDateString();
-            TxtHoraFim.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
-            
+            TxtDataInicio.Text = DateTime.Now.ToString();
+            //TxtHoraInicio.Text = DateTime.Now.TimeOfDay.ToString();
+            TxtDataFim.Text    = DateTime.Now.Date.ToLongDateString();
+            TxtHoraFim.Text    = DateTime.Now.TimeOfDay.ToString();
+
             ultimoRegistro = await API.BuscaUltimoRegistro("asdf", API.respostaLogin.Matricula);
 
             //Atualiza o combobox de gerentes
@@ -292,7 +292,7 @@ namespace SistemaATCTotem
             linha["GerenteResponsavel"] = TxtGerente.Text;
             linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
             linha["DataInicio"] = dataInicio.ToString().Replace(" 12:00:00 AM","");
-            linha["HoraInicio"] = TxtHoraInicio.Text;
+            //linha["HoraInicio"] = TxtHoraInicio.Text;
             linha["DataFim"] = dataFim.ToString().Replace(" 12:00:00 AM", "");
             linha["HoraFim"] = TxtHoraFim.Text;
 
@@ -309,8 +309,11 @@ namespace SistemaATCTotem
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                DG.Rows.RemoveAt(DG.CurrentCell.RowIndex);                // Remove a atividade do data grid
-                lancamentoDeHoras.Rows.RemoveAt(DG.CurrentCell.RowIndex); // Remove a atividade do data table
+                if (DG.Rows.Count > 1) // Impede que remova mais linhas que o possível
+                {
+                    DG.Rows.RemoveAt(DG.CurrentCell.RowIndex);                // Remove a atividade do data grid
+                    lancamentoDeHoras.Rows.RemoveAt(DG.CurrentCell.RowIndex); // Remove a atividade do data table
+                }
             }
         }
     }
