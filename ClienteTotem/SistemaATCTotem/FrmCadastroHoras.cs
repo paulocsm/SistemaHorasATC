@@ -300,5 +300,28 @@ namespace SistemaATCTotem
 
             AtualizaDataGridView(); // Atualiza o data grid na tela
         }
+
+        // Remove uma atividade selecionada no data grid view
+        private void CmdRemoverAtividade_Click(object sender, EventArgs e)
+        {
+            if (DG.SelectedRows.Count <= 0) // Mostra mensagem de erro se o usuário não selecionar nenhuma linha
+                MessageBox.Show("Selecione a atividade que deseja remover.", "Erro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                if(DG.SelectedRows.Count > 1)
+                    for (int i = 0; i < DG.SelectedRows.Count; i++)
+                    {
+                        // int selecionado = DG.CurrentCell.RowIndex;    // Pega a linha selecionada no data grid
+                        DG.Rows.RemoveAt(i);                // Remove a atividade do data grid
+                        lancamentoDeHoras.Rows.RemoveAt(i); // Remove a atividade do data table
+                    }
+                else
+                {
+                    DG.Rows.RemoveAt(DG.CurrentCell.RowIndex);                // Remove a atividade do data grid
+                    lancamentoDeHoras.Rows.RemoveAt(DG.CurrentCell.RowIndex); // Remove a atividade do data table
+                }
+            }
+        }
     }
 }

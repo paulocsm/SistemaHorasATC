@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.CmdFinalizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,6 +78,7 @@
             this.DataFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmdAdicionarAtividade = new System.Windows.Forms.Button();
+            this.CmdRemoverAtividade = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -89,7 +90,7 @@
             this.CmdCancelar.BackColor = System.Drawing.Color.Gray;
             this.CmdCancelar.Font = new System.Drawing.Font("Calibri", 22F);
             this.CmdCancelar.ForeColor = System.Drawing.Color.White;
-            this.CmdCancelar.Location = new System.Drawing.Point(576, 673);
+            this.CmdCancelar.Location = new System.Drawing.Point(757, 673);
             this.CmdCancelar.Name = "CmdCancelar";
             this.CmdCancelar.Size = new System.Drawing.Size(215, 83);
             this.CmdCancelar.TabIndex = 15;
@@ -514,14 +515,14 @@
             // 
             // DG
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodObra,
@@ -531,14 +532,14 @@
             this.HoraInicio,
             this.DataFinal,
             this.HoraFinal});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle4;
             this.DG.Location = new System.Drawing.Point(10, 434);
             this.DG.Name = "DG";
             this.DG.Size = new System.Drawing.Size(1342, 221);
@@ -599,12 +600,26 @@
             this.CmdAdicionarAtividade.UseVisualStyleBackColor = false;
             this.CmdAdicionarAtividade.Click += new System.EventHandler(this.CmdAdicionarAtividade_Click);
             // 
+            // CmdRemoverAtividade
+            // 
+            this.CmdRemoverAtividade.BackColor = System.Drawing.Color.Gray;
+            this.CmdRemoverAtividade.Font = new System.Drawing.Font("Calibri", 22F);
+            this.CmdRemoverAtividade.ForeColor = System.Drawing.Color.White;
+            this.CmdRemoverAtividade.Location = new System.Drawing.Point(365, 673);
+            this.CmdRemoverAtividade.Name = "CmdRemoverAtividade";
+            this.CmdRemoverAtividade.Size = new System.Drawing.Size(215, 83);
+            this.CmdRemoverAtividade.TabIndex = 39;
+            this.CmdRemoverAtividade.Text = "Remover Atividade";
+            this.CmdRemoverAtividade.UseVisualStyleBackColor = false;
+            this.CmdRemoverAtividade.Click += new System.EventHandler(this.CmdRemoverAtividade_Click);
+            // 
             // FrmCadastroHoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.CmdRemoverAtividade);
             this.Controls.Add(this.CmdAdicionarAtividade);
             this.Controls.Add(this.DG);
             this.Controls.Add(this.CmdConfiguracoes);
@@ -689,5 +704,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
+        private System.Windows.Forms.Button CmdRemoverAtividade;
     }
 }
