@@ -57,5 +57,10 @@ namespace SistemaATCTotem
         {
             Application.Exit();
         }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

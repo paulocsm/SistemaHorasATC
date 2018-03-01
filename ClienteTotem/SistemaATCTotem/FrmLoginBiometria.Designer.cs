@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.LblStatus = new System.Windows.Forms.Label();
-            this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.CmdConfiguracoes = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.PctLogoAtc = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +47,6 @@
             this.LblStatus.Size = new System.Drawing.Size(831, 45);
             this.LblStatus.TabIndex = 1;
             this.LblStatus.Text = "Posicione o dedo no leitor biométrico ou toque na tela";
-            // 
-            // PctLogoAtc
-            // 
-            this.PctLogoAtc.Image = global::SistemaATCTotem.Properties.Resources.atclogocinza;
-            this.PctLogoAtc.Location = new System.Drawing.Point(451, 62);
-            this.PctLogoAtc.Name = "PctLogoAtc";
-            this.PctLogoAtc.Size = new System.Drawing.Size(455, 461);
-            this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctLogoAtc.TabIndex = 0;
-            this.PctLogoAtc.TabStop = false;
-            this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
             // 
             // label1
             // 
@@ -100,6 +90,32 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // PctLogoAtc
+            // 
+            this.PctLogoAtc.Image = global::SistemaATCTotem.Properties.Resources.atclogocinza;
+            this.PctLogoAtc.Location = new System.Drawing.Point(451, 62);
+            this.PctLogoAtc.Name = "PctLogoAtc";
+            this.PctLogoAtc.Size = new System.Drawing.Size(455, 461);
+            this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctLogoAtc.TabIndex = 0;
+            this.PctLogoAtc.TabStop = false;
+            this.PctLogoAtc.Click += new System.EventHandler(this.PctLogoAtc_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Gray;
+            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.Image = global::SistemaATCTotem.Properties.Resources.line;
+            this.btnMinimizar.Location = new System.Drawing.Point(1248, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(59, 27);
+            this.btnMinimizar.TabIndex = 42;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
             // FrmLoginBiometria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +123,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
             this.ControlBox = false;
+            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.CmdConfiguracoes);
             this.Controls.Add(this.TxtId);
@@ -133,6 +150,7 @@
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Button CmdConfiguracoes;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }
 

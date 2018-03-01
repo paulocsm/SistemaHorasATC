@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IconeAutentica.ico" />
+    <None Include="Resources\line.png" />
     <None Include="Resources\close %281%29.png" />
   </ItemGroup>
   <ItemGroup>

@@ -35,9 +35,10 @@
             this.CmdLogin = new System.Windows.Forms.Button();
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.LblStatus = new System.Windows.Forms.Label();
-            this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             this.CmdConfiguracoes = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.PctLogoAtc = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,16 +125,6 @@
             this.LblStatus.TabIndex = 3;
             this.LblStatus.Text = "Informe os dados solicitados";
             // 
-            // PctLogoAtc
-            // 
-            this.PctLogoAtc.Image = global::SistemaATCTotem.Properties.Resources.atclogocinza;
-            this.PctLogoAtc.Location = new System.Drawing.Point(563, 39);
-            this.PctLogoAtc.Name = "PctLogoAtc";
-            this.PctLogoAtc.Size = new System.Drawing.Size(245, 242);
-            this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PctLogoAtc.TabIndex = 2;
-            this.PctLogoAtc.TabStop = false;
-            // 
             // CmdConfiguracoes
             // 
             this.CmdConfiguracoes.BackColor = System.Drawing.Color.Gray;
@@ -146,6 +137,21 @@
             this.CmdConfiguracoes.Text = "Configurações";
             this.CmdConfiguracoes.UseVisualStyleBackColor = false;
             this.CmdConfiguracoes.Click += new System.EventHandler(this.CmdConfiguracoes_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Gray;
+            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.Image = global::SistemaATCTotem.Properties.Resources.line;
+            this.btnMinimizar.Location = new System.Drawing.Point(1248, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(59, 27);
+            this.btnMinimizar.TabIndex = 41;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnFechar
             // 
@@ -161,12 +167,23 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // PctLogoAtc
+            // 
+            this.PctLogoAtc.Image = global::SistemaATCTotem.Properties.Resources.atclogocinza;
+            this.PctLogoAtc.Location = new System.Drawing.Point(563, 39);
+            this.PctLogoAtc.Name = "PctLogoAtc";
+            this.PctLogoAtc.Size = new System.Drawing.Size(245, 242);
+            this.PctLogoAtc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctLogoAtc.TabIndex = 2;
+            this.PctLogoAtc.TabStop = false;
+            // 
             // FrmLoguinMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.CmdConfiguracoes);
             this.Controls.Add(this.CmdCancelar);
@@ -200,5 +217,6 @@
         private System.Windows.Forms.Label LblStatus;
         private System.Windows.Forms.Button CmdConfiguracoes;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }
