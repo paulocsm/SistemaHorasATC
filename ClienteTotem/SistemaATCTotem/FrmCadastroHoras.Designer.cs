@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CmdCancelar = new System.Windows.Forms.Button();
             this.CmdFinalizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +70,8 @@
             this.CmdConfiguracoes = new System.Windows.Forms.Button();
             this.TmrData = new System.Windows.Forms.Timer(this.components);
             this.DG = new System.Windows.Forms.DataGridView();
+            this.CmdAdicionarAtividade = new System.Windows.Forms.Button();
+            this.CmdRemoverAtividade = new System.Windows.Forms.Button();
             this.CodObra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerenteResponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atividade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +79,6 @@
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CmdAdicionarAtividade = new System.Windows.Forms.Button();
-            this.CmdRemoverAtividade = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogoAtc)).BeginInit();
@@ -326,7 +326,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 33);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Data inicio";
+            this.label7.Text = "Data início";
             // 
             // LblHora
             // 
@@ -337,7 +337,7 @@
             this.LblHora.Name = "LblHora";
             this.LblHora.Size = new System.Drawing.Size(130, 33);
             this.LblHora.TabIndex = 15;
-            this.LblHora.Text = "Hora inicio";
+            this.LblHora.Text = "Hora início";
             // 
             // label9
             // 
@@ -379,9 +379,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(132, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(448, 39);
+            this.label11.Size = new System.Drawing.Size(454, 39);
             this.label11.TabIndex = 25;
-            this.label11.Text = "Sistema de apropriação de horas";
+            this.label11.Text = "Sistema de Apropriação de Horas";
             // 
             // label12
             // 
@@ -392,7 +392,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(137, 36);
             this.label12.TabIndex = 26;
-            this.label12.Text = "Matricula:";
+            this.label12.Text = "Matrícula:";
             // 
             // LblMatricula
             // 
@@ -524,14 +524,16 @@
             // DG
             // 
             this.DG.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DG.AllowUserToResizeColumns = false;
+            this.DG.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodObra,
@@ -541,61 +543,19 @@
             this.HoraInicio,
             this.DataFinal,
             this.HoraFinal});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG.Location = new System.Drawing.Point(10, 434);
             this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.Size = new System.Drawing.Size(1342, 221);
             this.DG.TabIndex = 37;
-            // 
-            // CodObra
-            // 
-            this.CodObra.HeaderText = "Cod. Obra";
-            this.CodObra.Name = "CodObra";
-            this.CodObra.Width = 121;
-            // 
-            // GerenteResponsavel
-            // 
-            this.GerenteResponsavel.HeaderText = "Gerente Responsavel";
-            this.GerenteResponsavel.Name = "GerenteResponsavel";
-            this.GerenteResponsavel.Width = 338;
-            // 
-            // Atividade
-            // 
-            this.Atividade.HeaderText = "Atividade Desenvolvida";
-            this.Atividade.Name = "Atividade";
-            this.Atividade.Width = 400;
-            // 
-            // DataInicio
-            // 
-            this.DataInicio.HeaderText = "Data Inicio";
-            this.DataInicio.Name = "DataInicio";
-            this.DataInicio.Width = 110;
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.Width = 110;
-            // 
-            // DataFinal
-            // 
-            this.DataFinal.HeaderText = "Data Final";
-            this.DataFinal.Name = "DataFinal";
-            this.DataFinal.Width = 110;
-            // 
-            // HoraFinal
-            // 
-            this.HoraFinal.HeaderText = "Hora Final";
-            this.HoraFinal.Name = "HoraFinal";
-            this.HoraFinal.Width = 110;
             // 
             // CmdAdicionarAtividade
             // 
@@ -622,6 +582,48 @@
             this.CmdRemoverAtividade.Text = "Remover Atividade";
             this.CmdRemoverAtividade.UseVisualStyleBackColor = false;
             this.CmdRemoverAtividade.Click += new System.EventHandler(this.CmdRemoverAtividade_Click);
+            // 
+            // CodObra
+            // 
+            this.CodObra.HeaderText = "Cod. Obra";
+            this.CodObra.Name = "CodObra";
+            this.CodObra.Width = 121;
+            // 
+            // GerenteResponsavel
+            // 
+            this.GerenteResponsavel.HeaderText = "Gerente Responsável";
+            this.GerenteResponsavel.Name = "GerenteResponsavel";
+            this.GerenteResponsavel.Width = 338;
+            // 
+            // Atividade
+            // 
+            this.Atividade.HeaderText = "Atividade Desenvolvida";
+            this.Atividade.Name = "Atividade";
+            this.Atividade.Width = 400;
+            // 
+            // DataInicio
+            // 
+            this.DataInicio.HeaderText = "Data Início";
+            this.DataInicio.Name = "DataInicio";
+            this.DataInicio.Width = 110;
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.HeaderText = "Hora Início";
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.Width = 110;
+            // 
+            // DataFinal
+            // 
+            this.DataFinal.HeaderText = "Data Final";
+            this.DataFinal.Name = "DataFinal";
+            this.DataFinal.Width = 110;
+            // 
+            // HoraFinal
+            // 
+            this.HoraFinal.HeaderText = "Hora Final";
+            this.HoraFinal.Name = "HoraFinal";
+            this.HoraFinal.Width = 110;
             // 
             // FrmCadastroHoras
             // 
@@ -705,6 +707,9 @@
         private System.Windows.Forms.ComboBox TxtAtividade;
         private System.Windows.Forms.DataGridView DG;
         private System.Windows.Forms.Button CmdAdicionarAtividade;
+        private System.Windows.Forms.Button CmdRemoverAtividade;
+        private System.Windows.Forms.DateTimePicker TxtHoraFim;
+        private System.Windows.Forms.DateTimePicker TxtHoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodObra;
         private System.Windows.Forms.DataGridViewTextBoxColumn GerenteResponsavel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Atividade;
@@ -712,8 +717,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFinal;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
-        private System.Windows.Forms.Button CmdRemoverAtividade;
-        private System.Windows.Forms.DateTimePicker TxtHoraFim;
-        private System.Windows.Forms.DateTimePicker TxtHoraInicio;
     }
 }

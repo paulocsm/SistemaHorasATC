@@ -46,7 +46,23 @@ namespace SistemaATCTotem
 
         private void CmdCancelar_Click(object sender, EventArgs e) // Desloga quando clica em cancelar
         {
-            Logout("Totem", "", "", 0, API.respostaLogin.Matricula);
+            try
+            {
+                Logout("Totem", "", "", 0, API.respostaLogin.Matricula);
+            }
+            catch(Exception ex)
+            {
+                imprimeExcecao(ex);
+            }
+        }
+
+        // Gera caixa indicando qual exceção foi acionada
+        private void imprimeExcecao(Exception ex)
+        {
+            MessageBox.Show("Exceção: "  + ex.GetType() + 
+                            "Mensagem: " + ex.Message   + 
+                            "Detalhes: " + ex.StackTrace, "Erro",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void TmrData_Tick(object sender, EventArgs e)
@@ -60,10 +76,10 @@ namespace SistemaATCTotem
             AuxAtualizaTela = true;
 
             // Atualiza os labels do cabeçalho (Matrícula, Nome, Deartamento e Função):
-            LblMatricula.Text = API.respostaLogin.Matricula.ToString();
-            LblNome.Text = API.respostaLogin.Nome;
+            LblMatricula.Text    = API.respostaLogin.Matricula.ToString();
+            LblNome.Text         = API.respostaLogin.Nome;
             LblDepartamento.Text = API.respostaLogin.Departamento;
-            LblFunção.Text = API.respostaLogin.Funcao;
+            LblFunção.Text       = API.respostaLogin.Funcao;
 
             // Atualiza os campos de data e hora inicial e final:
             TxtDataInicio.Text = DateTime.Now.ToString();
@@ -221,15 +237,22 @@ namespace SistemaATCTotem
 
         private void AtualizaDataGridView()
         {
-            // Percorre a lista de lançamento de obras, adicionando seus itens no Grid View
-            this.DG.Rows.Insert(lancamentoDeHoras.Rows.Count - 1,
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][0],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][1],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][2],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][3],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][4],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][5],
-                                lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][6]);
+            try
+            {
+                // Percorre a lista de lançamento de obras, adicionando seus itens no Grid View
+                this.DG.Rows.Insert(lancamentoDeHoras.Rows.Count - 1,
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][0],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][1],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][2],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][3],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][4],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][5],
+                                    lancamentoDeHoras.Rows[lancamentoDeHoras.Rows.Count - 1][6]);
+            }
+            catch(Exception ex)
+            {
+                imprimeExcecao(ex);
+            }
         }
 
         // Aparece mensagem em um balão ao passar o mouse sobre itens do formulário
@@ -278,25 +301,32 @@ namespace SistemaATCTotem
         // Pega as informações colocadas pelo usuário no formulário, salva na tabela e mostra no DataGrid
         private void CmdAdicionarAtividade_Click(object sender, EventArgs e)
         {
-            // Preenche a tabela de dados da atividade:
-            DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
+            try
+            {
+                // Preenche a tabela de dados da atividade:
+                DataRow linha = lancamentoDeHoras.NewRow(); // Cria nova linha para a data table
 
-            // Pega apenas a data dos campos dataInicio e dataFim
-            var dataInicio = TxtDataInicio.Text;
-            var dataFim    = TxtDataFim.Text;
+                // Pega apenas a data dos campos dataInicio e dataFim
+                var dataInicio = TxtDataInicio.Text;
+                var dataFim = TxtDataFim.Text;
 
-            // Pega todas as informações selecionadas pelo usuário no formulário
-            linha["CodObra"]               = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
-            linha["GerenteResponsavel"]    = TxtGerente.Text;
-            linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
-            linha["DataInicio"]            = dataInicio.ToString();
-            linha["HoraInicio"]            = TxtHoraInicio.Text;
-            linha["DataFim"]               = dataFim.ToString();
-            linha["HoraFim"]               = TxtHoraFim.Text;
+                // Pega todas as informações selecionadas pelo usuário no formulário
+                linha["CodObra"]               = TxtAno.Text + '-' + TxtNumero.Text.PadLeft(3, '0');
+                linha["GerenteResponsavel"]    = TxtGerente.Text;
+                linha["AtividadeDesenvolvida"] = TxtAtividade.Text;
+                linha["DataInicio"]            = dataInicio.ToString();
+                linha["HoraInicio"]            = TxtHoraInicio.Text;
+                linha["DataFim"]               = dataFim.ToString();
+                linha["HoraFim"]               = TxtHoraFim.Text;
 
-            lancamentoDeHoras.Rows.Add(linha); // Adiciona as informações na tabela
+                lancamentoDeHoras.Rows.Add(linha); // Adiciona as informações na tabela
 
-            AtualizaDataGridView(); // Atualiza o data grid na tela
+                AtualizaDataGridView(); // Atualiza o data grid na tela
+            }
+            catch(Exception ex)
+            {
+                imprimeExcecao(ex);
+            }
         }
 
         // Remove uma atividade selecionada no data grid view

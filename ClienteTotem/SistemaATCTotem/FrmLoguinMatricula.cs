@@ -49,7 +49,7 @@ namespace SistemaATCTotem
             // Usa o login e senha entrado pelo usuario para fazer login
             logar("", Convert.ToInt32(TxtMatricula.Text), 0, TxtSenha.Text, "Totem","");
             // Informa o usuario da verificacao no servidor
-            LblStatus.Text = "Verificando dados no serividor";
+            LblStatus.Text = "Verificando dados no servidor";
             LblStatus.ForeColor = Color.Black;
         }
 
