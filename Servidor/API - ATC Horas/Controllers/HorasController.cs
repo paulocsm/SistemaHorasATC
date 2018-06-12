@@ -10,11 +10,14 @@ namespace API___ATC_Horas.Controllers
 {
     public class HorasController : ApiController
     {
-       // [AcceptVerbs("GET")]
-     //   [Route("api/Horas/login/{IndiceBiometria}")]
-      //  public Funcionario Login(int IndiceBiometria)
-       // {
-
-       // }
+       // [AcceptVerbs("POST")]
+        [Route("api/Horas/Cadastro")]
+        [HttpPost]
+        public string CadastraHoras([FromBody] Atividades atividades)
+        {
+            string descricao;
+            descricao = atividades.FuncoesCapacitadas;
+            return descricao;
+        }
     }
 }

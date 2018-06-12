@@ -142,6 +142,27 @@ namespace SistemaATCTotem
             return horaeData;
         }
 
+        public static async Task<string> CadastrarHoras()
+        {
+            string Resposta;
+            string UrlComplementar;
+            UrlComplementar = "Horas/Cadastro";
+            HttpContent httpContent = new HttpContent();
+
+
+            try
+            {
+                Resposta = await Cliente.PostAsync()
+                Resposta = await Cliente.GetStringAsync((UrlBase + UrlComplementar));
+                horaeData = JsonConvert.DeserializeObject<DateTime>(Resposta);
+            }
+            catch (Exception e)
+            {
+                return horaeData;
+            }
+            return horaeData;
+        }
+
         public static string MD5Hash(string text)
         {
             MD5 md5 = new MD5CryptoServiceProvider();
